@@ -1,0 +1,528 @@
+from django.db import models
+from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator
+from django.db import transaction
+from django.core.exceptions import ValidationError
+from decimal import Decimal
+
+
+# ============================================================================
+# MODELOS DE CATEGORÍAS
+# ============================================================================
+
+class Categoria(models.Model):
+    """Categorías para clasificar gastos (ej: Materiales, Mano de Obra, etc.)"""
+    nombre = models.CharField(max_length=100, unique=True)
+    descripcion = models.TextField(blank=True, null=True)
+
+    class Meta:
+        verbose_name = "Categoría"
+        verbose_name_plural = "Categorías"
+        ordering = ['nombre']
+
+    def __str__(self):
+        return self.nombre
+
+    def __repr__(self):
+        return f"<Categoria: {self.nombre}>"
+
+
+# ============================================================================
+# MODELOS DE PROVEEDORES
+# ============================================================================
+
+class Proveedor(models.Model):
+    """Proveedores de materiales y servicios"""
+    nombre = models.CharField(max_length=150, unique=True)
+    telefono = models.CharField(max_length=20, blank=True)
+    direccion = models.TextField(blank=True)
+    especialidad = models.CharField(
+        max_length=100, 
+        help_text="Ej: Soldadura, Materiales de construcción"
+    )
+
+    class Meta:
+        verbose_name = "Proveedor"
+        verbose_name_plural = "Proveedores"
+        ordering = ['nombre']
+
+    @property
+    def total_pagado(self):
+        """Calcula el total pagado a este proveedor"""
+        return self.gastos.aggregate(total=models.Sum('monto'))['total'] or Decimal('0.00')
+
+    def __str__(self):
+        return self.nombre
+
+    def __repr__(self):
+        return f"<Proveedor: {self.nombre} - {self.especialidad}>"
+
+
+# ============================================================================
+# MODELOS DE PROYECTOS
+# ============================================================================
+
+class Proyecto(models.Model):
+    """Proyectos de construcción con presupuesto asignado"""
+    nombre = models.CharField(max_length=150)
+    presupuesto_objetivo = models.DecimalField(
+        max_digits=12, 
+        decimal_places=2, 
+        validators=[MinValueValidator(Decimal('0.01'))],
+        help_text="Presupuesto total del proyecto en Bs"
+    )
+    fecha_inicio = models.DateField()
+    descripcion = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name = "Proyecto"
+        verbose_name_plural = "Proyectos"
+        ordering = ['-fecha_inicio']
+
+    @property
+    def total_gastado(self):
+        """Suma total de todos los gastos del proyecto"""
+        return self.gastos.aggregate(total=models.Sum('monto'))['total'] or Decimal('0.00')
+
+    @property
+    def saldo_restante(self):
+        """Saldo disponible del presupuesto"""
+        return self.presupuesto_objetivo - self.total_gastado
+
+    def __str__(self):
+        return f"{self.nombre} - Presupuesto: {self.presupuesto_objetivo} Bs"
+
+    def __repr__(self):
+        return f"<Proyecto: {self.nombre} - Saldo: {self.saldo_restante} Bs>"
+
+
+# ============================================================================
+# MODELOS DE GASTOS
+# ============================================================================
+
+class Gasto(models.Model):
+    """Registro de gastos realizados en proyectos"""
+    
+    METODO_PAGO = [
+        ('EFECTIVO', 'Efectivo'),
+        ('TRANSFERENCIA', 'Transferencia Bancaria'),
+        ('QR', 'Pago QR'),
+    ]
+
+    # Relaciones
+    proyecto = models.ForeignKey(
+        Proyecto, 
+        on_delete=models.CASCADE, 
+        related_name='gastos'
+    )
+    categoria = models.ForeignKey(
+        Categoria, 
+        on_delete=models.PROTECT, 
+        related_name='gastos'
+    )
+    usuario = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL, 
+        null=True,
+        help_text="Usuario que registró el gasto"
+    )
+    proveedor_rel = models.ForeignKey(
+        Proveedor, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True, 
+        related_name='gastos',
+        verbose_name="Proveedor"
+    )
+
+    # Datos del gasto
+    monto = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        validators=[MinValueValidator(Decimal('0.01'))]
+    )
+    descripcion = models.CharField(max_length=255)
+    fecha = models.DateField()
+    
+    # Información de pago
+    metodo_pago = models.CharField(
+        max_length=20, 
+        choices=METODO_PAGO, 
+        default='TRANSFERENCIA'
+    )
+    nro_referencia = models.CharField(
+        max_length=100, 
+        blank=True, 
+        help_text="Nro de transferencia o factura"
+    )
+
+    # Metadatos
+    es_retroactivo = models.BooleanField(
+        default=False,
+        help_text="Indica si el gasto se registró después de su fecha real"
+    )
+    notas_contexto = models.TextField(
+        blank=True,
+        help_text="Contexto adicional del gasto. Ej: 'Comprobante de retiro bancario, usado para mano de obra de cimientos'"
+    )
+    imagen_comprobante = models.ImageField(
+        upload_to='comprobantes/%Y/%m/',
+        blank=True,
+        null=True,
+        help_text="Foto de la factura o comprobante del gasto"
+    )
+    creado_en = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Gasto"
+        verbose_name_plural = "Gastos"
+        ordering = ['-fecha', '-creado_en']
+
+    def __str__(self):
+        return f"{self.fecha} | {self.monto} Bs - {self.descripcion}"
+
+    def __repr__(self):
+        return f"<Gasto: {self.monto} Bs - {self.categoria.nombre}>"
+
+
+class Comprobante(models.Model):
+    """Fotos/imágenes de comprobantes de gastos"""
+    gasto = models.ForeignKey(
+        Gasto, 
+        on_delete=models.CASCADE, 
+        related_name='fotos'
+    )
+    imagen = models.ImageField(upload_to='comprobantes/%Y/%m/')
+    subido_en = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Comprobante"
+        verbose_name_plural = "Comprobantes"
+        ordering = ['-subido_en']
+
+    def __str__(self):
+        return f"Comprobante de gasto: {self.gasto.id}"
+
+    def __repr__(self):
+        return f"<Comprobante: Gasto #{self.gasto.id}>"
+
+
+# ============================================================================
+# MODELOS DE INVENTARIO
+# ============================================================================
+
+class Material(models.Model):
+    """Materiales de construcción con control de inventario"""
+    
+    UNIDADES = [
+        ('BOLSA', 'Bolsa'),
+        ('PIEZA', 'Pieza / Unidad'),
+        ('METRO_CUBICO', 'Metro Cúbico'),
+        ('KILO', 'Kilogramo'),
+        ('GLOBAL', 'Global'),
+    ]
+
+    nombre = models.CharField(max_length=100, unique=True)
+    unidad_medida = models.CharField(
+        max_length=20, 
+        choices=UNIDADES, 
+        default='BOLSA'
+    )
+    stock_actual = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        default=0
+    )
+    stock_minimo_alerta = models.DecimalField(
+        max_digits=10, 
+        decimal_places=2, 
+        default=5,
+        help_text="Nivel mínimo antes de alertar stock bajo"
+    )
+
+    class Meta:
+        verbose_name = "Material"
+        verbose_name_plural = "Materiales"
+        ordering = ['nombre']
+
+    def __str__(self):
+        return f"{self.nombre} ({self.stock_actual} {self.unidad_medida})"
+
+    def __repr__(self):
+        return f"<Material: {self.nombre} - Stock: {self.stock_actual}>"
+
+
+class MovimientoInventario(models.Model):
+    """Movimientos de entrada y salida de inventario"""
+    
+    TIPO_MOVIMIENTO = [
+        ('ENTRADA', 'Entrada (Compra/Ingreso)'),
+        ('SALIDA', 'Salida (Uso en Obra)'),
+    ]
+
+    material = models.ForeignKey(
+        Material, 
+        on_delete=models.CASCADE, 
+        related_name='movimientos'
+    )
+    tipo = models.CharField(max_length=10, choices=TIPO_MOVIMIENTO)
+    cantidad = models.DecimalField(max_digits=10, decimal_places=2)
+    fecha = models.DateTimeField(auto_now_add=True)
+    nota = models.CharField(
+        max_length=255, 
+        blank=True, 
+        help_text="Ej: Para cimientos del galpón"
+    )
+    
+    # Vincular la entrada a un gasto real (opcional)
+    gasto = models.ForeignKey(
+        'Gasto', 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True
+    )
+
+    class Meta:
+        verbose_name = "Movimiento de Inventario"
+        verbose_name_plural = "Movimientos de Inventario"
+        ordering = ['-fecha']
+
+    def save(self, *args, **kwargs):
+        """
+        Actualiza el stock automáticamente al guardar un movimiento.
+        Usa transacciones atómicas para evitar condiciones de carrera.
+        
+        Raises:
+            ValidationError: Si no hay suficiente stock para una salida.
+        """
+        from .exceptions import StockInsuficienteError
+        
+        with transaction.atomic():
+            # Bloquear el material para evitar race conditions
+            material = Material.objects.select_for_update().get(pk=self.material.pk)
+            
+            # Calcular nuevo stock según tipo de movimiento
+            if self.tipo == 'ENTRADA':
+                nuevo_stock = material.stock_actual + self.cantidad
+            else:  # SALIDA
+                nuevo_stock = material.stock_actual - self.cantidad
+                
+                # Validar que no quede stock negativo
+                if nuevo_stock < 0:
+                    raise ValidationError(
+                        f'Stock insuficiente para {material.nombre}. '
+                        f'Stock actual: {material.stock_actual} {material.unidad_medida}, '
+                        f'Cantidad solicitada: {self.cantidad} {material.unidad_medida}'
+                    )
+            
+            # Actualizar el stock del material
+            material.stock_actual = nuevo_stock
+            material.save()
+            
+            # Guardar el movimiento
+            super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"{self.tipo}: {self.cantidad} {self.material.unidad_medida} de {self.material.nombre}"
+
+    def __repr__(self):
+        return f"<MovimientoInventario: {self.tipo} - {self.material.nombre}>"
+
+
+# ============================================================================
+# MODELOS DE SOCIOS/FAMILIA
+# ============================================================================
+
+class Socio(models.Model):
+    """
+    Perfil extendido para socios/familia del proyecto.
+    Cada miembro de la familia que participa en el proyecto tiene un perfil.
+    """
+    ROLES = [
+        ('ADMINISTRADOR', 'Administrador'),  # Puede todo
+        ('REGISTRADOR', 'Registrador'),       # Registrar gastos y subir archivos
+        ('VISUALIZADOR', 'Visualizador'),     # Solo consultar
+    ]
+
+    usuario = models.OneToOneField(
+        User, 
+        on_delete=models.CASCADE, 
+        related_name='perfil_socio'
+    )
+    rol = models.CharField(max_length=20, choices=ROLES, default='REGISTRADOR')
+    telefono = models.CharField(max_length=20, blank=True)
+    parentesco = models.CharField(
+        max_length=50, 
+        help_text="Relación familiar. Ej: Hermana, Cuñado, Madre"
+    )
+    activo = models.BooleanField(
+        default=True,
+        help_text="Si está activo puede acceder al sistema"
+    )
+    fecha_registro = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Socio"
+        verbose_name_plural = "Socios"
+        ordering = ['usuario__first_name']
+
+    def __str__(self):
+        return f"{self.usuario.get_full_name() or self.usuario.username} ({self.parentesco})"
+
+    def __repr__(self):
+        return f"<Socio: {self.usuario.username} - {self.rol}>"
+
+
+# ============================================================================
+# MODELOS DE GALERÍA DE IMÁGENES
+# ============================================================================
+
+class Album(models.Model):
+    """
+    Álbumes para organizar fotos del proyecto.
+    Ej: "Cimientos", "Estructura", "Techado", "Terminado"
+    """
+    nombre = models.CharField(max_length=100)
+    descripcion = models.TextField(blank=True)
+    fecha_creacion = models.DateField(auto_now_add=True)
+    creado_por = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL, 
+        null=True,
+        related_name='albums_creados'
+    )
+
+    class Meta:
+        verbose_name = "Álbum"
+        verbose_name_plural = "Álbumes"
+        ordering = ['-fecha_creacion']
+
+    @property
+    def cantidad_fotos(self):
+        """Retorna la cantidad de fotos en el álbum"""
+        return self.fotos.count()
+
+    def __str__(self):
+        return f"{self.nombre} ({self.cantidad_fotos} fotos)"
+
+    def __repr__(self):
+        return f"<Album: {self.nombre}>"
+
+
+class FotoAlbum(models.Model):
+    """Fotos dentro de un álbum de la galería"""
+    album = models.ForeignKey(
+        Album, 
+        on_delete=models.CASCADE, 
+        related_name='fotos'
+    )
+    imagen = models.ImageField(upload_to='galeria/%Y/%m/')
+    titulo = models.CharField(max_length=100, blank=True)
+    descripcion = models.CharField(max_length=255, blank=True)
+    fecha_foto = models.DateField(
+        null=True, 
+        blank=True,
+        help_text="Fecha en que se tomó la foto"
+    )
+    fecha_subida = models.DateTimeField(auto_now_add=True)
+    subido_por = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL, 
+        null=True,
+        related_name='fotos_subidas'
+    )
+
+    class Meta:
+        verbose_name = "Foto"
+        verbose_name_plural = "Fotos"
+        ordering = ['-fecha_subida']
+
+    def __str__(self):
+        return self.titulo or f"Foto {self.id} - {self.album.nombre}"
+
+    def __repr__(self):
+        return f"<FotoAlbum: {self.id} en {self.album.nombre}>"
+
+
+# ============================================================================
+# MODELOS DE DOCUMENTOS
+# ============================================================================
+
+class CarpetaDocumento(models.Model):
+    """
+    Carpetas para organizar documentos.
+    Ej: "Plan de Pago Banco", "Contratos", "Facturas", "Permisos"
+    """
+    nombre = models.CharField(max_length=100, unique=True)
+    descripcion = models.TextField(blank=True)
+    icono = models.CharField(
+        max_length=50, 
+        default='folder',
+        help_text="Nombre del ícono para el frontend"
+    )
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Carpeta de Documentos"
+        verbose_name_plural = "Carpetas de Documentos"
+        ordering = ['nombre']
+
+    @property
+    def cantidad_documentos(self):
+        """Retorna la cantidad de documentos en la carpeta"""
+        return self.documentos.count()
+
+    def __str__(self):
+        return f"📁 {self.nombre}"
+
+    def __repr__(self):
+        return f"<CarpetaDocumento: {self.nombre}>"
+
+
+class Documento(models.Model):
+    """
+    Documentos del proyecto.
+    Ej: Plan de pago del banco, contratos, facturas, comprobantes, etc.
+    """
+    TIPOS = [
+        ('PLAN_PAGO', 'Plan de Pago'),
+        ('CONTRATO', 'Contrato'),
+        ('COMPROBANTE_BANCO', 'Comprobante Bancario'),
+        ('FACTURA', 'Factura'),
+        ('PERMISO', 'Permiso Municipal'),
+        ('PLANO', 'Plano/Diseño'),
+        ('OTRO', 'Otro'),
+    ]
+
+    carpeta = models.ForeignKey(
+        CarpetaDocumento, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        blank=True,
+        related_name='documentos'
+    )
+    tipo = models.CharField(max_length=20, choices=TIPOS, default='OTRO')
+    nombre = models.CharField(max_length=150)
+    archivo = models.FileField(upload_to='documentos/%Y/%m/')
+    descripcion = models.TextField(blank=True)
+    fecha_documento = models.DateField(
+        help_text="Fecha del documento (no de subida)"
+    )
+    fecha_subida = models.DateTimeField(auto_now_add=True)
+    subido_por = models.ForeignKey(
+        User, 
+        on_delete=models.SET_NULL, 
+        null=True,
+        related_name='documentos_subidos'
+    )
+
+    class Meta:
+        verbose_name = "Documento"
+        verbose_name_plural = "Documentos"
+        ordering = ['-fecha_documento']
+
+    def __str__(self):
+        return f"{self.get_tipo_display()}: {self.nombre}"
+
+    def __repr__(self):
+        return f"<Documento: {self.nombre} ({self.tipo})>"

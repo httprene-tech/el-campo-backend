@@ -1,0 +1,2271 @@
+INFO 2026-01-07 18:32:21,393 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 18:32:41,351 log "OPTIONS /api/proyectos/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:41,351 log "OPTIONS /api/proyectos/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:41,550 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:32:41,608 log "OPTIONS /api/gastos/?proyecto=1 HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:41,613 log "OPTIONS /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:41,655 log "OPTIONS /api/categorias/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:41,776 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:32:41,888 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:41,898 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:42,008 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:42,020 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:42,064 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:32:42,170 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:32:51,123 log "OPTIONS /api/proveedores/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:51,125 log "OPTIONS /api/proveedores/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:51,220 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:51,235 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:32:51,239 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:51,323 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:51,364 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:51,378 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:32:53,293 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:53,462 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:54,161 log "OPTIONS /api/albumes/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:54,161 log "OPTIONS /api/albumes/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:54,220 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:54,285 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:55,173 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:55,254 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:55,970 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:56,030 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:56,345 log "OPTIONS /api/carpetas/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:56,346 log "OPTIONS /api/carpetas/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:56,418 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:56,581 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:57,028 log "OPTIONS /api/materiales/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:57,028 log "OPTIONS /api/inventario-movimientos/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:57,028 log "OPTIONS /api/materiales/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:57,028 log "OPTIONS /api/inventario-movimientos/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:32:57,110 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:57,110 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:57,183 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:57,201 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:58,355 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:58,437 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:32:58,530 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:58,588 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:32:58,643 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:32:58,706 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:00,279 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:00,283 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:00,295 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:00,394 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:00,402 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:00,472 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:05,967 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:06,003 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:06,007 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:06,081 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:06,133 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:06,147 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:07,733 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:07,809 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:08,646 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:08,710 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:09,476 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:09,552 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:10,382 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:10,392 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:10,463 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:10,499 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:10,897 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:10,965 log "GET /api/albumes/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:22,194 log "POST /api/albumes/ HTTP/1.1" 201 152
+INFO 2026-01-07 18:33:22,357 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:33:24,622 log "OPTIONS /api/fotos/?album=1 HTTP/1.1" 200 0
+INFO 2026-01-07 18:33:24,677 log "GET /api/fotos/?album=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:36,591 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:36,654 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:40,067 log "OPTIONS /api/proyectos/1/exportar_pdf/?mes_actual=true HTTP/1.1" 200 0
+INFO 2026-01-07 18:33:40,296 log "GET /api/proyectos/1/exportar_pdf/?mes_actual=true HTTP/1.1" 200 2174
+INFO 2026-01-07 18:33:48,172 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:48,181 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:48,196 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:48,284 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:48,317 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:48,319 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:54,205 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:54,212 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:54,232 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:54,320 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:33:54,350 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:54,375 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:59,519 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:33:59,574 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:02,403 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:02,412 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:02,485 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:02,488 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:20,587 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:34:20,601 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:20,613 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:20,726 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:34:20,732 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:34:20,746 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:09,796 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:09,807 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:09,827 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:09,911 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:09,923 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:09,963 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:11,691 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:11,851 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:12,261 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:12,329 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:13,937 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:13,937 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:13,940 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:14,045 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:14,092 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:14,109 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:41,579 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:41,591 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:41,605 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:41,677 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:41,708 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:41,743 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:43,876 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:43,942 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:47,163 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:35:47,231 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:35:50,024 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:50,100 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:52,649 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:52,669 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:52,687 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:52,783 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:52,804 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:52,833 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:56,577 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:56,583 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:56,594 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:56,675 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:35:56,709 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:56,718 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:58,206 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:58,216 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:58,291 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:58,306 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:59,693 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:35:59,761 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:01,419 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:01,430 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:01,442 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:01,539 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:01,544 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:01,558 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:14,360 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:14,368 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:14,402 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:14,460 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:14,480 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:14,507 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:16,257 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:16,265 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:16,271 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:16,359 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:16,384 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:16,407 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:25,441 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:25,505 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:26,343 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:36:26,413 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:36:27,317 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:27,327 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:27,400 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:27,405 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:28,862 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:28,916 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:29,969 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:36:30,042 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:36:30,302 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:30,356 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:30,714 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:30,728 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:30,740 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:30,863 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:30,876 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:30,903 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:31,231 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:31,243 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:31,257 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:31,356 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:31,367 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:31,386 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:32,635 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:32,641 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:32,652 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:32,738 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:32,773 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:32,778 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:34,283 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:34,344 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:34,958 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:34,963 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:34,984 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:35,052 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:35,077 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:35,131 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:35,750 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:35,755 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:35,759 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:35,924 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:35,928 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:35,929 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:37,033 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:37,091 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:37,822 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:37,822 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:37,848 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:37,920 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:36:37,950 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:36:37,970 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:03,515 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:03,522 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:38:03,540 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:03,644 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:38:03,681 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:03,699 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:04,930 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:05,010 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:05,836 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:05,902 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:06,526 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:06,533 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:06,628 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:06,628 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,193 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:38:08,200 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,232 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,343 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,387 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:38:08,402 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,594 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,633 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:38:08,648 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,734 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:38:08,807 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:38:08,807 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:25,348 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:25,349 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:25,354 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:25,447 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:25,499 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:25,504 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:26,251 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:26,262 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:26,274 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:26,405 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:26,418 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:26,418 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:28,691 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:28,714 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:28,800 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:28,818 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:29,668 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:29,737 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:30,611 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:41:30,701 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:41:31,692 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:31,699 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:31,741 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:31,803 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:31,829 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:31,863 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:35,748 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:35,766 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:35,783 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:35,944 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:41:35,944 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:41:36,008 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:53,478 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:43:53,505 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:53,512 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:53,608 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:43:53,624 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:53,645 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:55,652 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:43:55,656 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:55,656 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:55,757 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:55,797 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:43:55,801 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:43:59,018 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:43:59,188 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:44:00,198 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:00,259 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:00,947 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:00,966 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:01,035 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:01,064 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:01,092 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:01,147 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:08,087 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:44:08,265 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:08,272 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:08,333 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:44:08,377 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:08,564 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:08,583 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:08,647 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:12,607 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:12,617 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:12,635 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:12,724 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:12,763 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:12,768 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:14,655 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:14,723 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:15,506 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:15,675 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:16,350 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:44:16,418 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:44:17,205 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:17,273 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:17,894 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:17,899 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:17,906 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:18,012 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:18,044 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:18,052 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:19,915 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:19,926 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:19,931 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:20,011 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:20,044 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:20,070 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:21,571 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:21,726 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:24,911 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:24,973 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:26,053 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:26,058 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:26,142 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:26,146 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:27,063 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:44:27,137 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:44:28,566 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:44:28,570 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:28,584 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:28,697 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:28,711 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:44:28,729 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:07,459 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:45:07,586 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:07,623 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:07,636 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:45:07,685 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:07,904 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:07,904 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:07,928 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:28,450 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:28,461 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:28,461 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:28,576 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:28,624 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:28,656 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:29,485 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:29,485 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:29,497 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:29,679 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:29,692 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:29,692 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:58,206 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:45:58,375 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:58,416 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:58,450 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:58,494 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:45:58,706 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:45:58,728 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:45:58,759 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:10,596 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:10,628 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:10,643 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:10,704 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:10,774 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:10,783 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:12,832 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:12,902 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:15,285 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:46:15,370 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:46:18,123 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:18,191 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:20,911 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:20,911 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:20,960 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:21,223 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:21,246 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:21,272 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:34,252 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:34,258 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:34,282 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:34,462 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:34,506 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:34,518 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:35,943 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:36,006 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:36,969 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:36,969 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:37,071 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:37,090 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:39,480 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:39,500 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:39,583 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:39,705 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:39,779 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:39,803 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:41,019 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:41,030 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:41,068 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:41,157 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:41,293 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:41,463 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:55,044 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:55,045 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:55,115 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:55,199 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:55,209 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:46:55,265 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:57,337 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:57,410 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:58,186 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:46:58,252 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:46:59,179 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:59,265 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:59,920 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:46:59,938 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:00,020 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:00,041 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:01,701 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:01,710 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:01,710 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:01,959 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:01,972 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:01,996 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:06,517 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:47:06,762 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:06,857 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:47:06,862 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:06,924 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:07,142 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:07,177 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:07,202 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:10,631 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:10,640 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:10,762 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:10,775 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:11,082 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:11,160 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:13,186 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:47:13,321 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:47:15,098 log "GET /api/fotos/?album=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:18,492 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:18,506 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:18,622 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:18,657 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:20,385 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:47:20,490 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:47:21,384 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:21,543 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:25,077 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:25,090 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:25,116 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:25,302 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:25,304 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:25,341 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:31,823 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:31,823 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:31,871 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:31,943 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:31,965 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:32,019 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:33,956 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:47:34,556 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:34,579 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:34,665 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:47:34,695 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:34,897 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:35,002 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:35,026 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:41,245 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:41,246 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:41,305 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:41,356 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:41,432 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:41,459 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:43,254 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:47:43,254 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:43,276 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:43,406 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:43,510 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:47:43,517 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:09,919 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:10,035 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:10,114 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:10,166 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:10,374 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:10,419 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:12,466 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:12,484 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:12,487 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:12,696 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:12,705 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:12,753 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:32,725 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:32,741 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:32,757 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:32,857 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:32,861 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:32,897 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:34,791 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:34,855 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:35,655 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:48:35,729 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:48:36,430 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:36,498 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:37,199 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:37,266 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:37,304 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:37,376 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:39,385 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:39,386 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:39,404 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:39,560 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:39,626 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:48:39,644 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:48:58,743 log "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:49:00,885 log "POST /api/auth/login/ HTTP/1.1" 200 145
+INFO 2026-01-07 18:49:01,021 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:49:01,122 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:49:01,155 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:01,165 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:01,225 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:01,311 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:01,316 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:01,406 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:18,342 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:18,345 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:18,427 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:18,558 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:18,572 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:18,636 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:21,043 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:21,110 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:23,081 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:49:23,180 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:49:24,233 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:24,237 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:24,243 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:24,337 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:24,353 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:24,364 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:28,484 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:28,554 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:28,573 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:28,639 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:30,798 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:30,856 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:32,096 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:49:32,166 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:49:33,267 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:33,344 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:35,794 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:35,820 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:35,823 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:35,889 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:35,961 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:35,962 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:38,768 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:38,781 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:49:38,781 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:38,884 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:38,948 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:49:38,955 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:50:01,566 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:01,569 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:50:01,595 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:01,681 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:01,713 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:50:01,720 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:03,338 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:50:03,403 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:50:03,977 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:03,986 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:04,054 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:04,071 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:05,287 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:50:05,291 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:05,294 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:05,450 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:50:05,464 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:50:05,465 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:02,963 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:51:02,984 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:02,992 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:03,085 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:51:03,097 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:03,108 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:03,835 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:03,958 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:04,558 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:04,561 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:04,645 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:51:04,645 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:25,395 log "POST /api/auth/login/ HTTP/1.1" 200 145
+INFO 2026-01-07 18:52:25,533 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:52:25,643 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:52:25,670 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:52:25,714 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:25,785 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:52:25,817 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:25,853 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:25,983 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:32,650 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:32,654 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:52:32,656 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:32,760 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:32,800 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:52:32,800 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:34,130 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:52:34,202 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:52:34,789 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:34,959 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:35,549 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:35,555 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:35,648 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:35,656 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:36,832 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:52:36,832 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:36,899 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:37,015 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:37,080 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:52:37,130 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:37,920 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:52:37,920 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:37,921 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:38,086 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:38,102 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:52:38,124 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:11,924 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:53:12,083 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:53:12,108 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:12,114 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:12,158 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:12,335 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:12,350 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:12,355 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:37,234 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:37,242 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:37,247 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:37,372 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:37,380 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:37,403 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:38,863 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:38,929 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:39,548 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:53:39,629 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:53:40,313 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:40,473 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:41,016 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:41,027 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:41,106 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:41,112 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:42,091 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:42,099 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:42,137 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:42,228 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:42,257 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:42,322 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:52,099 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:52,113 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:52,117 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:52,218 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:52,255 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:52,283 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:54,754 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:54,770 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:54,783 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:54,874 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:54,912 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:54,930 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:55,071 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:55,088 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:55,090 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:55,221 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:55,239 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:55,259 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:57,846 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:53:57,989 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:53:58,059 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:58,091 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:53:58,102 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:58,271 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:58,280 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:53:58,286 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:00,704 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:00,822 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:00,853 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:00,857 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:00,878 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:01,074 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:01,076 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:01,078 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:02,043 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:02,179 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:02,205 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:02,214 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:02,218 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:02,346 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:02,351 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:02,371 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:03,880 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:04,024 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:04,026 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:04,047 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:04,076 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:04,230 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:04,238 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:04,312 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:05,561 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:05,573 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:05,659 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:05,666 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:05,759 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:05,761 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:07,038 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:07,040 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:07,050 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:07,187 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:07,195 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:07,205 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:08,611 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:08,627 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:08,643 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:08,749 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:08,788 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:08,795 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:09,161 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:09,161 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:09,176 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:09,294 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:09,327 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:09,332 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:10,779 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:10,841 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:11,370 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:54:11,438 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:54:12,188 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:12,227 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:12,281 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:12,313 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:12,352 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:12,380 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:12,919 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:12,937 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:12,940 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:13,047 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:13,144 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:13,159 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:15,597 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:15,741 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:15,782 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:15,807 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:54:15,810 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:15,927 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:15,938 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:15,949 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,063 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:18,065 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,066 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,227 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,255 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:18,260 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,760 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:18,761 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,763 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,884 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:54:18,915 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:54:18,917 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:56:18,188 log "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:56:21,643 log "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:57:08,541 autoreload D:\Escritorio\Software el Campo\core\settings.py changed, reloading.
+INFO 2026-01-07 18:59:09,500 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 18:59:10,639 log "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:12,755 log "POST /api/auth/login/ HTTP/1.1" 200 145
+INFO 2026-01-07 18:59:12,800 log "OPTIONS /api/proyectos/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:12,902 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:59:12,931 log "OPTIONS /api/gastos/?proyecto=1 HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:12,939 log "OPTIONS /api/categorias/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:12,940 log "OPTIONS /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:13,034 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:13,049 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:13,120 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:16,058 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:59:16,191 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:16,207 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:16,234 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:19,766 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 18:59:19,932 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:19,936 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:19,961 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:23,546 log "OPTIONS /api/proveedores/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:23,671 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:23,676 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:23,692 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:27,429 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:27,436 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:27,473 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:28,962 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:29,550 log "OPTIONS /api/albumes/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:29,624 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:59:30,934 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:31,311 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:31,327 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:31,358 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:32,476 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:32,489 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:32,491 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:33,096 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:33,107 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:33,111 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:35,335 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:36,507 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:36,509 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:36,520 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:37,129 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:37,129 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 18:59:37,138 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:38,332 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 18:59:39,021 log "OPTIONS /api/carpetas/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:39,197 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:39,881 log "OPTIONS /api/materiales/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:39,882 log "OPTIONS /api/inventario-movimientos/ HTTP/1.1" 200 0
+INFO 2026-01-07 18:59:39,978 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:39,979 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:41,094 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:41,097 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 18:59:41,229 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:05,064 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:05,068 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:05,082 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:06,654 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:06,808 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:06,912 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:08,721 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:08,754 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:08,757 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:22,074 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:22,084 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:22,240 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:31,900 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:31,917 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:31,946 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:34,414 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:00:35,120 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:35,733 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:35,745 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:36,449 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:36,466 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:36,484 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:54,064 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:00:54,223 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:54,258 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:54,272 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:55,271 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:55,276 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:55,303 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:56,071 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:56,084 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:00:56,088 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:56,562 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:57,243 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:00:57,854 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:58,570 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:58,576 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:59,191 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:00:59,883 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:01:00,513 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:01,533 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:01,561 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:01,564 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:02,849 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:02,883 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:02,888 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:03,282 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:03,287 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:03,308 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:03,989 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:03,999 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:04,007 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:04,800 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:04,821 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:04,831 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:05,579 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:05,580 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:05,581 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:07,233 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:07,244 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:07,258 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:32,249 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:32,249 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:32,283 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:52,655 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:01:52,739 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:01:52,740 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:02:46,016 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:02:48,146 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:02:48,169 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:02:48,213 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:46,246 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:48,540 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:05:48,541 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:48,543 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:52,302 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:05:52,426 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:52,459 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:05:52,497 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:55,525 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:05:55,642 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:55,651 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:05:55,656 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:05:59,146 autoreload D:\Escritorio\Software el Campo\finanzas\views.py changed, reloading.
+INFO 2026-01-07 19:06:00,359 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 19:06:11,468 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:11,469 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:11,476 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:06:13,091 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:13,095 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:06:13,096 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:13,580 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:06:13,581 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:13,587 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:26,937 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:27,762 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:06:28,207 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:28,980 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:06:28,987 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:28,987 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:29,678 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:06:29,683 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:29,862 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:30,208 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:30,948 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:06:30,953 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:06:30,986 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:18,385 autoreload D:\Escritorio\Software el Campo\finanzas\views.py changed, reloading.
+INFO 2026-01-07 19:07:19,267 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 19:07:35,101 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:35,104 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:35,108 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:07:36,173 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:36,926 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:37,345 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:37,352 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:38,281 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:38,327 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:07:38,329 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:42,947 autoreload D:\Escritorio\Software el Campo\finanzas\urls.py changed, reloading.
+INFO 2026-01-07 19:07:43,813 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 19:07:53,004 log "POST /api/auth/login/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:07:53,128 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:07:53,224 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:07:53,234 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:07:53,300 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:08:08,095 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:08:08,108 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:08:08,111 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:08:09,208 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:08:09,932 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:08:10,439 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:08:10,441 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:08:11,446 log "GET /api/categorias/ HTTP/1.1" 200 463
+INFO 2026-01-07 19:08:11,462 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:08:11,464 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:11,572 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:11:11,729 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:11,732 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:11:11,735 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:23,037 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:23,048 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:23,089 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:11:25,404 log "GET /api/proyectos/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:11:25,564 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:11:25,567 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:25,611 log "GET /api/proveedores/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:39,579 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:11:39,762 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:11:39,772 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:39,790 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:11:42,008 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:42,012 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:11:42,021 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:44,283 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:11:55,866 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:11:58,237 log "OPTIONS /api/fotos/?album=1 HTTP/1.1" 200 0
+INFO 2026-01-07 19:11:58,306 log "GET /api/fotos/?album=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:11:59,884 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:00,601 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:08,253 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:08,253 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:08,264 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:09,226 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:09,236 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:09,245 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:12,268 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:13,544 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:12:14,464 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:14,476 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:14,500 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:15,797 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:15,808 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:15,816 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:52,789 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:52,915 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:52,927 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:53,839 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:12:53,937 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:12:54,034 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:54,062 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:54,085 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:54,143 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:54,206 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:54,249 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:57,153 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:12:57,315 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:12:58,473 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:58,481 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:58,562 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:58,577 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:59,365 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:59,439 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:59,893 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:12:59,894 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:59,906 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:12:59,989 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:12:59,996 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:13:00,041 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:13:00,473 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:13:00,474 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:00,476 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:00,608 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:00,622 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:13:00,659 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:02,767 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:02,794 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:13:02,807 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:13:02,882 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:02,928 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:13:02,940 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:13:06,796 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:06,809 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:06,872 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:06,891 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:07,928 log "OPTIONS /api/gastos/?proyecto=3 HTTP/1.1" 200 0
+INFO 2026-01-07 19:13:07,929 log "OPTIONS /api/gastos/?proyecto=3 HTTP/1.1" 200 0
+INFO 2026-01-07 19:13:07,929 log "OPTIONS /api/gastos/resumen_mensual/?proyecto=3 HTTP/1.1" 200 0
+INFO 2026-01-07 19:13:07,929 log "OPTIONS /api/gastos/resumen_mensual/?proyecto=3 HTTP/1.1" 200 0
+INFO 2026-01-07 19:13:08,051 log "GET /api/gastos/resumen_mensual/?proyecto=3 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:08,074 log "GET /api/gastos/?proyecto=3 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:08,094 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:13:08,215 log "GET /api/gastos/resumen_mensual/?proyecto=3 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:08,289 log "GET /api/gastos/?proyecto=3 HTTP/1.1" 200 2
+INFO 2026-01-07 19:13:08,317 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:11,473 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:11,538 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:12,058 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:14:12,125 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:14:12,899 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:13,029 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:13,490 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:13,560 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:14,194 log "GET /api/gastos/?proyecto=3 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:14,205 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:14,228 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:14,291 log "GET /api/gastos/?proyecto=3 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:14,307 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:14,326 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:15,762 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:14:15,912 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:14:16,011 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:16,013 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:16,030 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:16,139 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:16,146 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:16,155 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:26,620 log "POST /api/auth/login/ HTTP/1.1" 200 243
+INFO 2026-01-07 19:14:26,712 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:14:26,872 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:14:26,876 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:26,888 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:26,906 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:27,072 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:27,085 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:27,094 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:27,910 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:28,003 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:28,996 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:28,997 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:29,014 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:14:29,093 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:14:29,110 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:14:29,120 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:36,998 log "OPTIONS /api/gastos/ HTTP/1.1" 200 0
+INFO 2026-01-07 19:15:37,067 views Gasto creado exitosamente: 1000.00 Bs en proyecto Galpon
+INFO 2026-01-07 19:15:37,117 log "POST /api/gastos/ HTTP/1.1" 201 442
+INFO 2026-01-07 19:15:37,126 log "OPTIONS /api/proyectos/1/ HTTP/1.1" 200 0
+INFO 2026-01-07 19:15:37,264 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:37,267 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:37,282 log "GET /api/proyectos/1/ HTTP/1.1" 200 181
+INFO 2026-01-07 19:15:37,323 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:37,417 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:37,455 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:37,503 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:42,967 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:42,970 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 37
+INFO 2026-01-07 19:15:42,976 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:43,086 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 37
+INFO 2026-01-07 19:15:43,109 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:43,153 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:45,308 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:45,380 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:45,901 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:15:45,967 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:15:46,614 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:15:46,616 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:15:46,688 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:15:46,698 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:15:47,253 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:15:47,318 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:15:47,766 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:47,834 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:48,988 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 37
+INFO 2026-01-07 19:15:49,001 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:49,085 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:49,096 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:49,217 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 37
+INFO 2026-01-07 19:15:49,254 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:50,252 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:50,266 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:50,278 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:50,361 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:50,371 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:50,395 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:51,810 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:15:51,894 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:15:52,855 log "GET /api/fotos/?album=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:15:53,659 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:53,825 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:54,844 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:54,865 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:54,866 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:54,944 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:54,996 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:55,014 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:56,964 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:56,971 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:56,988 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:57,060 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:15:57,088 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:15:57,108 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:15:59,635 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:15:59,697 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:16:00,459 log "GET /api/fotos/?album=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:04,355 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:04,362 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:16:04,381 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:04,454 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:04,497 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 444
+INFO 2026-01-07 19:16:04,529 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:11,777 log "OPTIONS /api/gastos/1/ HTTP/1.1" 200 0
+INFO 2026-01-07 19:16:11,863 log "DELETE /api/gastos/1/ HTTP/1.1" 204 0
+INFO 2026-01-07 19:16:11,957 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:11,971 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:12,013 log "GET /api/proyectos/1/ HTTP/1.1" 200 179
+INFO 2026-01-07 19:16:12,102 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:12,181 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:12,212 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:12,228 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:28,643 views Gasto creado exitosamente: 10.00 Bs en proyecto Galpon
+INFO 2026-01-07 19:16:28,651 log "POST /api/gastos/ HTTP/1.1" 201 428
+INFO 2026-01-07 19:16:28,771 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:28,784 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:16:28,787 log "GET /api/proyectos/1/ HTTP/1.1" 200 180
+INFO 2026-01-07 19:16:28,796 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:28,904 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:16:28,908 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:28,913 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:41,264 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:41,434 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:42,370 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:16:42,435 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:16:43,519 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:43,577 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:44,566 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:44,574 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:44,645 log "GET /api/inventario-movimientos/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:44,649 log "GET /api/materiales/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:48,657 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:48,719 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:50,035 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:16:50,124 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:16:51,516 log "GET /api/fotos/?album=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:16:56,333 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:56,502 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:58,204 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:58,237 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:58,310 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:16:58,330 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:16:58,343 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:16:58,401 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:19:18,952 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 35
+INFO 2026-01-07 19:19:18,956 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:18,972 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:19:19,052 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 35
+INFO 2026-01-07 19:19:19,060 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:19,154 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:19:26,571 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:26,636 log "GET /api/carpetas/ HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:27,156 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:19:27,333 log "GET /api/albumes/ HTTP/1.1" 200 115
+INFO 2026-01-07 19:19:27,966 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:19:27,966 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:27,984 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:28,146 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 430
+INFO 2026-01-07 19:19:28,168 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:28,209 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:29,597 log "OPTIONS /api/gastos/2/ HTTP/1.1" 200 0
+INFO 2026-01-07 19:19:29,683 log "DELETE /api/gastos/2/ HTTP/1.1" 204 0
+INFO 2026-01-07 19:19:29,790 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:29,812 log "GET /api/proyectos/1/ HTTP/1.1" 200 179
+INFO 2026-01-07 19:19:29,812 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:29,814 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:29,943 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:29,951 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:29,963 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:31,497 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:31,500 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:31,505 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:31,641 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:31,677 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:31,690 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:47,322 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:47,335 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:47,351 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:47,519 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:47,531 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:47,541 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:49,568 autoreload D:\Escritorio\Software el Campo\finanzas\models.py changed, reloading.
+INFO 2026-01-07 19:19:51,145 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 19:19:52,073 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:52,182 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:19:53,446 log "GET /api/categorias/ HTTP/1.1" 200 1016
+ERROR 2026-01-07 19:19:53,691 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+INFO 2026-01-07 19:19:53,732 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:19:53,766 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:19:53,811 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:53,879 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:19:53,922 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+ERROR 2026-01-07 19:19:53,940 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:19:58,436 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:19:58,456 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:19:58,501 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+INFO 2026-01-07 19:19:58,522 log "GET /api/categorias/ HTTP/1.1" 200 1016
+ERROR 2026-01-07 19:19:58,530 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:19:58,566 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:19:58,636 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+ERROR 2026-01-07 19:19:58,647 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:19:59,533 log "GET /api/categorias/ HTTP/1.1" 200 1016
+ERROR 2026-01-07 19:19:59,572 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+INFO 2026-01-07 19:19:59,573 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+ERROR 2026-01-07 19:19:59,623 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:19:59,764 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:19:59,773 log "GET /api/categorias/ HTTP/1.1" 200 1016
+ERROR 2026-01-07 19:19:59,809 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+ERROR 2026-01-07 19:19:59,825 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:20:00,931 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:20:00,948 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:20:00,995 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+INFO 2026-01-07 19:20:01,018 log "GET /api/categorias/ HTTP/1.1" 200 1016
+ERROR 2026-01-07 19:20:01,037 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:20:01,062 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:20:01,155 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+ERROR 2026-01-07 19:20:01,168 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:20:20,872 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:20:20,880 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:20:20,926 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+ERROR 2026-01-07 19:20:20,958 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:20:20,991 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:20:21,003 log "GET /api/categorias/ HTTP/1.1" 200 1016
+ERROR 2026-01-07 19:20:21,079 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+ERROR 2026-01-07 19:20:21,094 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:20:31,951 autoreload D:\Escritorio\Software el Campo\finanzas\serializers.py changed, reloading.
+INFO 2026-01-07 19:20:32,750 autoreload Watching for file changes with StatReloader
+INFO 2026-01-07 19:20:37,733 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:20:37,739 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:20:37,811 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+INFO 2026-01-07 19:20:37,828 log "GET /api/categorias/ HTTP/1.1" 200 1016
+ERROR 2026-01-07 19:20:37,840 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:20:37,870 log "GET /api/proveedores/ HTTP/1.1" 200 467
+ERROR 2026-01-07 19:20:37,987 log Internal Server Error: /api/gastos/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\rest_framework\serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+                                                   ^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 390, in __iter__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_gasto.imagen_comprobante
+LINE 1: ..._retroactivo", "finanzas_gasto"."notas_contexto", "finanzas_...
+                                                             ^
+
+ERROR 2026-01-07 19:20:37,998 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 500 25459
+INFO 2026-01-07 19:21:10,165 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:21:10,322 log "GET /api/proyectos/ HTTP/1.1" 200 474
+INFO 2026-01-07 19:21:10,339 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:21:10,339 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:21:10,360 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:21:10,475 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:21:10,477 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:21:10,492 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:22:03,679 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:03,699 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:03,705 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:03,848 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:03,865 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:03,878 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:05,841 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:05,859 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:05,894 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:22:05,976 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:05,992 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:06,015 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:22:07,589 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:07,595 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:07,616 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:07,700 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:07,750 log "GET /api/gastos/resumen_mensual/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:07,775 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:09,219 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:09,236 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:22:09,328 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:09,458 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:09,511 log "GET /api/proveedores/ HTTP/1.1" 200 467
+INFO 2026-01-07 19:22:09,534 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:21,339 log "GET /api/categorias/ HTTP/1.1" 200 1016
+INFO 2026-01-07 19:22:21,428 log "GET /api/gastos/?proyecto=1 HTTP/1.1" 200 2
+INFO 2026-01-07 19:22:21,477 log "GET /api/proveedores/ HTTP/1.1" 200 467

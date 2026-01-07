@@ -1,0 +1,23 @@
+# Django Framework
+asgiref==3.11.0
+Django==6.0.1
+sqlparse==0.5.5
+tzdata==2025.3
+
+# Django REST Framework
+djangorestframework==3.16.1
+
+# CORS Headers para React/Vite
+django-cors-headers==4.9.0
+
+# Database Driver (PostgreSQL)
+psycopg2-binary==2.9.10
+
+# Image Processing
+pillow==12.1.0
+
+# Environment Variables
+python-dotenv==1.0.1
+
+# PDF Generation
+reportlab==4.2.5
