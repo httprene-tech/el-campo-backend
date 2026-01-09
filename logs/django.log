@@ -2890,3 +2890,19 @@ INFO 2026-01-09 00:44:32,583 autoreload Watching for file changes with StatReloa
 INFO 2026-01-09 00:45:19,546 autoreload D:\Escritorio\Software el Campo\core\settings.py changed, reloading.
 INFO 2026-01-09 00:45:20,473 autoreload Watching for file changes with StatReloader
 INFO 2026-01-09 00:46:08,387 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 00:46:11,208 log "POST /admin/login/?next=/admin/finanzas/carpetadocumento/ HTTP/1.1" 302 0
+INFO 2026-01-09 00:46:11,531 log "GET /admin/finanzas/carpetadocumento/ HTTP/1.1" 200 24676
+INFO 2026-01-09 00:46:11,637 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212
+INFO 2026-01-09 00:46:14,606 log "GET /admin/finanzas/carpetadocumento/ HTTP/1.1" 200 24676
+INFO 2026-01-09 00:46:14,685 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212
+INFO 2026-01-09 00:46:20,555 log "GET /admin/auth/user/ HTTP/1.1" 200 31115
+INFO 2026-01-09 00:46:20,645 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212
+INFO 2026-01-09 00:46:20,673 log "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 558
+INFO 2026-01-09 00:46:20,694 log "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1761
+INFO 2026-01-09 00:46:20,742 log "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 645
+INFO 2026-01-09 00:46:27,987 log "GET /admin/finanzas/carpetadocumento/ HTTP/1.1" 200 24676
+INFO 2026-01-09 00:46:28,060 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212
+INFO 2026-01-09 00:46:30,112 log "GET /admin/finanzas/documento/ HTTP/1.1" 200 26332
+INFO 2026-01-09 00:46:30,183 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212
+INFO 2026-01-09 00:46:32,681 log "GET /admin/finanzas/proyecto/ HTTP/1.1" 200 27077
+INFO 2026-01-09 00:46:32,754 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212

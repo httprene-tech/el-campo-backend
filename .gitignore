@@ -17,7 +17,7 @@ elcampo.pem
 *.egg-info
 dist/
 build/
-
+django.log
 # IDEs
 .vscode/
 .idea/
