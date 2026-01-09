@@ -5,3 +5,26 @@ __pycache__/
 db.sqlite3
 .pem
 elcampo.pem
+
+# Archivos temporales de desarrollo
+*.log
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist/
+build/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

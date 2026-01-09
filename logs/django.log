@@ -2720,3 +2720,173 @@ LINE 1: SELECT "finanzas_carpetadocumento"."id", "finanzas_carpetado...
                                                  ^
 
 ERROR 2026-01-09 00:26:04,464 log "GET /admin/finanzas/carpetadocumento/ HTTP/1.1" 500 174920
+INFO 2026-01-09 00:27:21,773 autoreload D:\Escritorio\Software el Campo\core\common\models.py changed, reloading.
+INFO 2026-01-09 00:27:23,381 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 00:34:03,683 autoreload D:\Escritorio\Software el Campo\inventario\__init__.py changed, reloading.
+INFO 2026-01-09 00:34:05,055 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 00:36:31,963 autoreload Watching for file changes with StatReloader
+ERROR 2026-01-09 00:36:32,945 log Internal Server Error: /admin/finanzas/carpetadocumento/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_carpetadocumento.creado_en
+LINE 1: SELECT "finanzas_carpetadocumento"."id", "finanzas_carpetado...
+                                                 ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\contrib\admin\options.py", line 710, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\contrib\admin\sites.py", line 247, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\contrib\admin\options.py", line 2121, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 372, in __len__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_carpetadocumento.creado_en
+LINE 1: SELECT "finanzas_carpetadocumento"."id", "finanzas_carpetado...
+                                                 ^
+
+ERROR 2026-01-09 00:36:32,960 log "GET /admin/finanzas/carpetadocumento/ HTTP/1.1" 500 175057
+ERROR 2026-01-09 00:36:34,685 log Internal Server Error: /admin/finanzas/carpetadocumento/
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: no existe la columna finanzas_carpetadocumento.creado_en
+LINE 1: SELECT "finanzas_carpetadocumento"."id", "finanzas_carpetado...
+                                                 ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\contrib\admin\options.py", line 710, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\contrib\admin\sites.py", line 247, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\contrib\admin\options.py", line 2121, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 372, in __len__
+    self._fetch_all()
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 2000, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\query.py", line 95, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1624, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\utils.py", line 94, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\Escritorio\Software el Campo\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: no existe la columna finanzas_carpetadocumento.creado_en
+LINE 1: SELECT "finanzas_carpetadocumento"."id", "finanzas_carpetado...
+                                                 ^
+
+ERROR 2026-01-09 00:36:34,741 log "GET /admin/finanzas/carpetadocumento/ HTTP/1.1" 500 175057
+INFO 2026-01-09 00:39:36,322 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 00:39:37,325 log "GET /admin/finanzas/carpetadocumento/ HTTP/1.1" 302 0
+INFO 2026-01-09 00:39:37,400 log "GET /admin/login/?next=/admin/finanzas/carpetadocumento/ HTTP/1.1" 200 4200
+INFO 2026-01-09 00:39:41,575 log "POST /admin/login/?next=/admin/finanzas/carpetadocumento/ HTTP/1.1" 200 4408
+INFO 2026-01-09 00:44:31,279 autoreload D:\Escritorio\Software el Campo\core\settings.py changed, reloading.
+INFO 2026-01-09 00:44:32,583 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 00:45:19,546 autoreload D:\Escritorio\Software el Campo\core\settings.py changed, reloading.
+INFO 2026-01-09 00:45:20,473 autoreload Watching for file changes with StatReloader
+INFO 2026-01-09 00:46:08,387 autoreload Watching for file changes with StatReloader

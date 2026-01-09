@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     # Módulos del ERP
+    'core',
     'core.common',
     'finanzas',
     'inventario',
