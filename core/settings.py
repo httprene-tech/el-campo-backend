@@ -44,7 +44,14 @@ INSTALLED_APPS = [
     'rest_framework', 
     'rest_framework.authtoken',
     'corsheaders',
-    'finanzas'
+    # Módulos del ERP
+    'core.common',
+    'finanzas',
+    'inventario',
+    'calendario',
+    'produccion',
+    'salud',
+    'alimentacion',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
@@ -52,7 +59,13 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAuthenticated',
-    ]
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 20,
+    'DEFAULT_FILTER_BACKENDS': [
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    ],
 }
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -100,8 +113,11 @@ DATABASES = {
 }
 
 # Configuración de CORS (Para que React PWA pueda conectarse)
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173').split(',')
-CORS_ALLOWED_ORIGINS.append('http://localhost:4173')
+CORS_ALLOW_ALL_ORIGINS = os.getenv('CORS_ALLOW_ALL_ORIGINS') == 'True'
+
+if not CORS_ALLOW_ALL_ORIGINS:
+    CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173').split(',')
+    CORS_ALLOWED_ORIGINS.append('http://localhost:4173')
 
 # Permite credenciales en CORS si es necesario
 CORS_ALLOW_CREDENTIALS = True

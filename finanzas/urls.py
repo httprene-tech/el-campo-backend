@@ -3,8 +3,6 @@ from rest_framework.routers import DefaultRouter
 from .views import (
     # Finanzas
     ProyectoViewSet, CategoriaViewSet, GastoViewSet, ProveedorViewSet,
-    # Inventario
-    MaterialViewSet, MovimientoInventarioViewSet,
     # Socios/Familia
     SocioViewSet,
     # Galería
@@ -23,10 +21,6 @@ router.register(r'proyectos', ProyectoViewSet)
 router.register(r'categorias', CategoriaViewSet)
 router.register(r'gastos', GastoViewSet)
 router.register(r'proveedores', ProveedorViewSet)
-
-# Inventario (comentado para postergar según el plan)
-router.register(r'materiales', MaterialViewSet)
-router.register(r'inventario-movimientos', MovimientoInventarioViewSet)
 
 # Socios/Familia
 router.register(r'socios', SocioViewSet)

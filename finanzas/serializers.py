@@ -6,8 +6,7 @@ from rest_framework import serializers
 
 # Local imports
 from .models import (
-    Proyecto, Categoria, Gasto, Comprobante, Proveedor, 
-    Material, MovimientoInventario,
+    Proyecto, Categoria, Gasto, Comprobante, Proveedor,
     Socio, Album, FotoAlbum, CarpetaDocumento, Documento
 )
 
@@ -84,7 +83,7 @@ class ProveedorSerializer(serializers.ModelSerializer):
 
     def get_cantidad_gastos(self, obj):
         """Retorna la cantidad de gastos asociados al proveedor."""
-        return obj.gastos.count()
+        return obj.gastos.filter(eliminado=False).count()
 
 
 # ============================================================================
@@ -131,26 +130,6 @@ class ProyectoSerializer(serializers.ModelSerializer):
             porcentaje = (obj.total_gastado / obj.presupuesto_objetivo) * 100
             return round(porcentaje, 2)
         return 0
-
-
-# ============================================================================
-# SERIALIZERS DE INVENTARIO
-# ============================================================================
-
-class MaterialSerializer(serializers.ModelSerializer):
-    """Serializer para materiales de construcción."""
-    class Meta:
-        model = Material
-        fields = '__all__'
-
-
-class MovimientoInventarioSerializer(serializers.ModelSerializer):
-    """Serializer para movimientos de inventario."""
-    material_nombre = serializers.ReadOnlyField(source='material.nombre')
-    
-    class Meta:
-        model = MovimientoInventario
-        fields = '__all__'
 
 
 # ============================================================================

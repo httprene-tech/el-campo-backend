@@ -25,17 +25,18 @@ from reportlab.lib.styles import getSampleStyleSheet
 
 # Local imports
 from .models import (
-    Proyecto, Categoria, Gasto, Proveedor, Material, MovimientoInventario,
+    Proyecto, Categoria, Gasto, Proveedor,
     Socio, Album, FotoAlbum, CarpetaDocumento, Documento
 )
 from .serializers import (
     ProyectoSerializer, CategoriaSerializer, GastoSerializer, ProveedorSerializer,
-    MaterialSerializer, MovimientoInventarioSerializer,
     SocioSerializer, AlbumSerializer, AlbumListSerializer, FotoAlbumSerializer,
     CarpetaDocumentoSerializer, CarpetaDocumentoListSerializer, DocumentoSerializer
 )
+from core.common.mixins import OptimizedQuerySetMixin, FilterByDateMixin
 from .constants import ERROR_PRESUPUESTO_EXCEDIDO
-from .permissions import IsAdminOrReadOnly
+from .services import FinanzasService
+from core.common.permissions import IsAdminOrReadOnly
 
 # Logger configuration
 logger = logging.getLogger(__name__)
@@ -114,25 +115,29 @@ class CambiarContrasenaView(APIView):
 # VIEWSETS DE SOCIOS/FAMILIA
 # ============================================================================
 
-class SocioViewSet(viewsets.ModelViewSet):
+class SocioViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """
     ViewSet para gestionar socios/familia del proyecto.
     Solo administradores pueden crear/editar/eliminar socios.
     """
-    queryset = Socio.objects.filter(activo=True)
+    queryset = Socio.objects.filter(activo=True, eliminado=False)
     serializer_class = SocioSerializer
     permission_classes = [permissions.IsAuthenticated, IsAdminOrReadOnly]
+
+    def get_queryset(self):
+        """Optimiza queries."""
+        return super().get_queryset().select_related('usuario')
 
 
 # ============================================================================
 # VIEWSETS DE GALERÍA
 # ============================================================================
 
-class AlbumViewSet(viewsets.ModelViewSet):
+class AlbumViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """
     ViewSet para gestionar álbumes de fotos.
     """
-    queryset = Album.objects.all()
+    queryset = Album.objects.filter(eliminado=False)
     serializer_class = AlbumSerializer
     permission_classes = [permissions.IsAuthenticated]
 
@@ -142,27 +147,35 @@ class AlbumViewSet(viewsets.ModelViewSet):
             return AlbumListSerializer
         return AlbumSerializer
 
+    def get_queryset(self):
+        """Optimiza queries."""
+        queryset = super().get_queryset()
+        return queryset.select_related('creado_por').prefetch_related('fotos')
+
     def perform_create(self, serializer):
         """Asigna el usuario que crea el álbum."""
         serializer.save(creado_por=self.request.user)
 
 
-class FotoAlbumViewSet(viewsets.ModelViewSet):
+class FotoAlbumViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """
     ViewSet para gestionar fotos dentro de álbumes.
     """
-    queryset = FotoAlbum.objects.all()
+    queryset = FotoAlbum.objects.filter(eliminado=False)
     serializer_class = FotoAlbumSerializer
     permission_classes = [permissions.IsAuthenticated]
     parser_classes = [MultiPartParser, FormParser]
 
     def get_queryset(self):
-        """Permite filtrar fotos por álbum."""
-        queryset = FotoAlbum.objects.all()
+        """Optimiza queries y permite filtrar fotos por álbum."""
+        queryset = super().get_queryset()
+        queryset = queryset.select_related('album', 'subido_por')
+        
         album_id = self.request.query_params.get('album', None)
         if album_id:
             queryset = queryset.filter(album_id=album_id)
-        return queryset
+        
+        return queryset.order_by('-creado_en')
 
     def perform_create(self, serializer):
         """Asigna el usuario que sube la foto."""
@@ -173,11 +186,11 @@ class FotoAlbumViewSet(viewsets.ModelViewSet):
 # VIEWSETS DE DOCUMENTOS
 # ============================================================================
 
-class CarpetaDocumentoViewSet(viewsets.ModelViewSet):
+class CarpetaDocumentoViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """
     ViewSet para gestionar carpetas de documentos.
     """
-    queryset = CarpetaDocumento.objects.all()
+    queryset = CarpetaDocumento.objects.filter(eliminado=False)
     serializer_class = CarpetaDocumentoSerializer
     permission_classes = [permissions.IsAuthenticated]
 
@@ -187,19 +200,26 @@ class CarpetaDocumentoViewSet(viewsets.ModelViewSet):
             return CarpetaDocumentoListSerializer
         return CarpetaDocumentoSerializer
 
+    def get_queryset(self):
+        """Optimiza queries."""
+        queryset = super().get_queryset()
+        return queryset.prefetch_related('documentos').order_by('nombre')
 
-class DocumentoViewSet(viewsets.ModelViewSet):
+
+class DocumentoViewSet(OptimizedQuerySetMixin, FilterByDateMixin, viewsets.ModelViewSet):
     """
     ViewSet para gestionar documentos.
     """
-    queryset = Documento.objects.all()
+    queryset = Documento.objects.filter(eliminado=False)
     serializer_class = DocumentoSerializer
     permission_classes = [permissions.IsAuthenticated]
     parser_classes = [MultiPartParser, FormParser]
 
     def get_queryset(self):
-        """Permite filtrar documentos por carpeta y tipo."""
-        queryset = Documento.objects.all()
+        """Optimiza queries y permite filtrar documentos por carpeta y tipo."""
+        queryset = super().get_queryset()
+        queryset = queryset.select_related('carpeta', 'subido_por')
+        
         carpeta_id = self.request.query_params.get('carpeta', None)
         tipo = self.request.query_params.get('tipo', None)
         
@@ -207,7 +227,18 @@ class DocumentoViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(carpeta_id=carpeta_id)
         if tipo:
             queryset = queryset.filter(tipo=tipo)
-        return queryset
+        
+        # Filtro por fecha_documento
+        fecha_field = 'fecha_documento'
+        fecha_inicio = self.request.query_params.get('fecha_inicio')
+        fecha_fin = self.request.query_params.get('fecha_fin')
+        
+        if fecha_inicio:
+            queryset = queryset.filter(**{f'{fecha_field}__gte': fecha_inicio})
+        if fecha_fin:
+            queryset = queryset.filter(**{f'{fecha_field}__lte': fecha_fin})
+        
+        return queryset.order_by('-fecha_documento')
 
     def perform_create(self, serializer):
         """Asigna el usuario que sube el documento."""
@@ -215,46 +246,43 @@ class DocumentoViewSet(viewsets.ModelViewSet):
 
 
 # ============================================================================
-# VIEWSETS DE INVENTARIO
-# ============================================================================
-
-class MaterialViewSet(viewsets.ModelViewSet):
-    """ViewSet para gestionar materiales de construcción."""
-    queryset = Material.objects.all()
-    serializer_class = MaterialSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-
-class MovimientoInventarioViewSet(viewsets.ModelViewSet):
-    """ViewSet para registrar movimientos de inventario."""
-    queryset = MovimientoInventario.objects.all()
-    serializer_class = MovimientoInventarioSerializer
-    permission_classes = [permissions.IsAuthenticated]
-
-
-# ============================================================================
 # VIEWSETS DE PROVEEDORES
 # ============================================================================
 
-class ProveedorViewSet(viewsets.ModelViewSet):
+class ProveedorViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """ViewSet para gestionar proveedores."""
-    queryset = Proveedor.objects.all()
+    queryset = Proveedor.objects.filter(eliminado=False)
     serializer_class = ProveedorSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        """Optimiza queries."""
+        queryset = super().get_queryset()
+        return queryset.prefetch_related('gastos').order_by('nombre')
 
 
 # ============================================================================
 # VIEWSETS DE PROYECTOS
 # ============================================================================
 
-class ProyectoViewSet(viewsets.ModelViewSet):
+class ProyectoViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """
     ViewSet para gestionar proyectos de construcción.
     Incluye endpoint personalizado para exportar reportes en PDF.
     """
-    queryset = Proyecto.objects.all()
+    queryset = Proyecto.objects.filter(eliminado=False)
     serializer_class = ProyectoSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        """Optimiza queries con prefetch_related."""
+        queryset = super().get_queryset()
+        return queryset.prefetch_related(
+            'gastos__categoria',
+            'gastos__proveedor_rel',
+            'gastos__usuario',
+            'gastos__fotos'
+        )
 
     @action(detail=True, methods=['get'])
     def exportar_pdf(self, request, pk=None):
@@ -269,7 +297,12 @@ class ProyectoViewSet(viewsets.ModelViewSet):
             - mes_anterior: Si es 'true', filtra solo el mes anterior
         """
         proyecto = self.get_object()
-        gastos = Gasto.objects.filter(proyecto=proyecto).order_by('fecha')
+        gastos = Gasto.objects.filter(
+            proyecto=proyecto,
+            eliminado=False
+        ).select_related(
+            'categoria', 'proveedor_rel', 'usuario', 'proyecto'
+        ).prefetch_related('fotos').order_by('fecha')
 
         # Aplicar filtros
         fecha_inicio = request.query_params.get('fecha_inicio')
@@ -403,30 +436,39 @@ class ProyectoViewSet(viewsets.ModelViewSet):
 # VIEWSETS DE CATEGORÍAS
 # ============================================================================
 
-class CategoriaViewSet(viewsets.ModelViewSet):
+class CategoriaViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """ViewSet para gestionar categorías de gastos."""
-    queryset = Categoria.objects.all()
+    queryset = Categoria.objects.filter(eliminado=False)
     serializer_class = CategoriaSerializer
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        """Optimiza queries."""
+        return super().get_queryset().order_by('nombre')
 
 
 # ============================================================================
 # VIEWSETS DE GASTOS
 # ============================================================================
 
-class GastoViewSet(viewsets.ModelViewSet):
+class GastoViewSet(OptimizedQuerySetMixin, FilterByDateMixin, viewsets.ModelViewSet):
     """
     ViewSet para registrar y gestionar gastos del proyecto.
     Incluye validaciones automáticas de presupuesto y filtros.
     """
-    queryset = Gasto.objects.all()
+    queryset = Gasto.objects.filter(eliminado=False)
     serializer_class = GastoSerializer
     permission_classes = [permissions.IsAuthenticated]
     parser_classes = [MultiPartParser, FormParser]
 
     def get_queryset(self):
-        """Permite filtrar gastos por proyecto, categoría, fecha y retroactivo."""
-        queryset = Gasto.objects.all()
+        """Optimiza queries y permite filtrar gastos por proyecto, categoría, fecha y retroactivo."""
+        queryset = super().get_queryset()
+        
+        # Optimizar con select_related
+        queryset = queryset.select_related(
+            'proyecto', 'categoria', 'usuario', 'proveedor_rel'
+        ).prefetch_related('fotos')
         
         proyecto_id = self.request.query_params.get('proyecto')
         categoria_id = self.request.query_params.get('categoria')
@@ -459,18 +501,22 @@ class GastoViewSet(viewsets.ModelViewSet):
         proyecto = serializer.validated_data['proyecto']
         monto_nuevo = serializer.validated_data['monto']
         
-        if proyecto.total_gastado + monto_nuevo > proyecto.presupuesto_objetivo:
+        # Usar servicio para validar presupuesto
+        try:
+            FinanzasService.validar_presupuesto_disponible(proyecto, monto_nuevo)
+        except Exception as e:
             logger.warning(
                 f'Intento de gasto que excede presupuesto: Proyecto={proyecto.nombre}, '
-                f'Monto={monto_nuevo}, Saldo disponible={proyecto.saldo_restante}'
+                f'Monto={monto_nuevo}'
             )
+            saldo_disponible = FinanzasService.calcular_saldo_proyecto(proyecto)
             return Response(
                 {
                     "error": ERROR_PRESUPUESTO_EXCEDIDO,
                     "detalle": {
                         "presupuesto_total": str(proyecto.presupuesto_objetivo),
-                        "total_gastado": str(proyecto.total_gastado),
-                        "saldo_disponible": str(proyecto.saldo_restante),
+                        "total_gastado": str(proyecto.presupuesto_objetivo - saldo_disponible),
+                        "saldo_disponible": str(saldo_disponible),
                         "monto_solicitado": str(monto_nuevo)
                     }
                 },
@@ -500,7 +546,10 @@ class GastoViewSet(viewsets.ModelViewSet):
         
         from django.db.models.functions import TruncMonth
         
-        gastos = Gasto.objects.filter(proyecto_id=proyecto_id)
+        gastos = Gasto.objects.filter(
+            proyecto_id=proyecto_id,
+            eliminado=False
+        )
         resumen = gastos.annotate(
             mes=TruncMonth('fecha')
         ).values('mes').annotate(

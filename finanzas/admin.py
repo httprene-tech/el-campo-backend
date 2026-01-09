@@ -1,8 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import (
-    Categoria, Proyecto, Gasto, Comprobante, Proveedor, 
-    Material, MovimientoInventario,
+    Categoria, Proyecto, Gasto, Comprobante, Proveedor,
     Socio, Album, FotoAlbum, CarpetaDocumento, Documento
 )
 
@@ -42,7 +41,7 @@ class DocumentoInline(admin.TabularInline):
     """Permite ver documentos dentro de la carpeta"""
     model = Documento
     extra = 0
-    readonly_fields = ('ver_archivo', 'fecha_subida', 'subido_por')
+    readonly_fields = ('ver_archivo', 'creado_en', 'subido_por')
     fields = ('nombre', 'tipo', 'archivo', 'fecha_documento', 'ver_archivo')
 
     def ver_archivo(self, obj):
@@ -58,10 +57,11 @@ class DocumentoInline(admin.TabularInline):
 
 @admin.register(Socio)
 class SocioAdmin(admin.ModelAdmin):
-    list_display = ('nombre_completo', 'parentesco', 'rol', 'telefono', 'activo', 'fecha_registro')
+    list_display = ('nombre_completo', 'parentesco', 'rol', 'telefono', 'activo', 'creado_en')
     list_filter = ('rol', 'activo')
     search_fields = ('usuario__username', 'usuario__first_name', 'usuario__last_name', 'parentesco')
     list_editable = ('activo',)
+    readonly_fields = ('creado_en', 'actualizado_en')
     
     def nombre_completo(self, obj):
         nombre = obj.usuario.get_full_name() or obj.usuario.username
@@ -76,16 +76,24 @@ class SocioAdmin(admin.ModelAdmin):
 @admin.register(Proyecto)
 class ProyectoAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'presupuesto_objetivo', 'total_gastado_format', 'saldo_restante_format', 'fecha_inicio')
-    readonly_fields = ('total_gastado_format', 'saldo_restante_format')
+    readonly_fields = ('total_gastado_format', 'saldo_restante_format', 'creado_en', 'actualizado_en')
     search_fields = ('nombre',)
 
     def total_gastado_format(self, obj):
-        return format_html('<b>{:,.2f} Bs</b>', obj.total_gastado)
+        try:
+            val = float(obj.total_gastado)
+            return format_html('<b>{:,.2f} Bs</b>', val)
+        except (ValueError, TypeError):
+            return format_html('<b>{} Bs</b>', obj.total_gastado)
     total_gastado_format.short_description = "Total Gastado"
 
     def saldo_restante_format(self, obj):
-        color = "green" if obj.saldo_restante > 0 else "red"
-        return format_html('<b style="color: {};">{:,.2f} Bs</b>', color, obj.saldo_restante)
+        try:
+            val = float(obj.saldo_restante)
+            color = "green" if val > 0 else "red"
+            return format_html('<b style="color: {};">{:,.2f} Bs</b>', color, val)
+        except (ValueError, TypeError):
+             return format_html('<b>{} Bs</b>', obj.saldo_restante)
     saldo_restante_format.short_description = "Saldo Disponible"
 
 
@@ -96,6 +104,7 @@ class GastoAdmin(admin.ModelAdmin):
     search_fields = ('descripcion', 'proveedor_rel__nombre', 'nro_referencia', 'notas_contexto')
     autocomplete_fields = ['categoria', 'proyecto', 'proveedor_rel']
     inlines = [ComprobanteInline]
+    readonly_fields = ('creado_en', 'actualizado_en')
     date_hierarchy = 'fecha'
     
     fieldsets = (
@@ -125,16 +134,18 @@ class GastoAdmin(admin.ModelAdmin):
 class CategoriaAdmin(admin.ModelAdmin):
     search_fields = ['nombre']
     list_display = ('nombre', 'descripcion', 'cantidad_gastos')
+    readonly_fields = ('creado_en', 'actualizado_en')
     
     def cantidad_gastos(self, obj):
-        return obj.gastos.count()
+        return obj.gastos.filter(eliminado=False).count()
     cantidad_gastos.short_description = "Gastos Registrados"
 
 
 @admin.register(Comprobante)
 class ComprobanteAdmin(admin.ModelAdmin):
-    list_display = ('gasto', 'subido_en', 'ver_foto')
-    list_filter = ('subido_en',)
+    list_display = ('gasto', 'creado_en', 'ver_foto')
+    list_filter = ('creado_en',)
+    readonly_fields = ('creado_en', 'actualizado_en')
     
     def ver_foto(self, obj):
         return format_html('<a href="{}" target="_blank">Ver Imagen</a>', obj.imagen.url)
@@ -149,46 +160,15 @@ class ComprobanteAdmin(admin.ModelAdmin):
 class ProveedorAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'telefono', 'especialidad', 'total_pagado_format', 'cantidad_gastos')
     search_fields = ('nombre', 'especialidad')
-    readonly_fields = ('total_pagado_format',)
+    readonly_fields = ('total_pagado_format', 'creado_en', 'actualizado_en')
     
     def total_pagado_format(self, obj):
         return format_html('<b>{:,.2f} Bs</b>', obj.total_pagado)
     total_pagado_format.short_description = "Total Pagado"
     
     def cantidad_gastos(self, obj):
-        return obj.gastos.count()
+        return obj.gastos.filter(eliminado=False).count()
     cantidad_gastos.short_description = "Cantidad de Gastos"
-
-
-# ============================================================================
-# ADMIN DE INVENTARIO
-# ============================================================================
-
-@admin.register(Material)
-class MaterialAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'unidad_medida', 'stock_actual_format', 'stock_minimo_alerta', 'alerta_stock')
-    list_filter = ('unidad_medida',)
-    search_fields = ('nombre',)
-    
-    def stock_actual_format(self, obj):
-        color = "red" if obj.stock_actual <= obj.stock_minimo_alerta else "green"
-        return format_html('<b style="color: {};">{} {}</b>', color, obj.stock_actual, obj.unidad_medida)
-    stock_actual_format.short_description = "Stock Actual"
-    
-    def alerta_stock(self, obj):
-        if obj.stock_actual <= obj.stock_minimo_alerta:
-            return format_html('<span style="color: red;">⚠️ Stock Bajo</span>')
-        return format_html('<span style="color: green;">✓ OK</span>')
-    alerta_stock.short_description = "Estado"
-
-
-@admin.register(MovimientoInventario)
-class MovimientoInventarioAdmin(admin.ModelAdmin):
-    list_display = ('material', 'tipo', 'cantidad', 'fecha', 'nota')
-    list_filter = ('tipo', 'fecha', 'material')
-    search_fields = ('material__nombre', 'nota')
-    readonly_fields = ('fecha',)
-    autocomplete_fields = ['material', 'gasto']
 
 
 # ============================================================================
@@ -197,9 +177,9 @@ class MovimientoInventarioAdmin(admin.ModelAdmin):
 
 @admin.register(Album)
 class AlbumAdmin(admin.ModelAdmin):
-    list_display = ('nombre', 'cantidad_fotos_display', 'fecha_creacion', 'creado_por')
+    list_display = ('nombre', 'cantidad_fotos_display', 'creado_en', 'creado_por')
     search_fields = ('nombre', 'descripcion')
-    readonly_fields = ('cantidad_fotos_display', 'fecha_creacion')
+    readonly_fields = ('cantidad_fotos_display', 'creado_en', 'actualizado_en')
     inlines = [FotoAlbumInline]
     
     def cantidad_fotos_display(self, obj):
@@ -214,9 +194,10 @@ class AlbumAdmin(admin.ModelAdmin):
 
 @admin.register(FotoAlbum)
 class FotoAlbumAdmin(admin.ModelAdmin):
-    list_display = ('miniatura', 'titulo', 'album', 'fecha_foto', 'fecha_subida', 'subido_por')
-    list_filter = ('album', 'fecha_subida')
+    list_display = ('miniatura', 'titulo', 'album', 'fecha_foto', 'creado_en', 'subido_por')
+    list_filter = ('album', 'creado_en')
     search_fields = ('titulo', 'descripcion', 'album__nombre')
+    readonly_fields = ('creado_en', 'actualizado_en')
     
     def miniatura(self, obj):
         if obj.imagen:
@@ -239,9 +220,9 @@ class FotoAlbumAdmin(admin.ModelAdmin):
 
 @admin.register(CarpetaDocumento)
 class CarpetaDocumentoAdmin(admin.ModelAdmin):
-    list_display = ('icono_nombre', 'cantidad_docs', 'fecha_creacion')
+    list_display = ('icono_nombre', 'cantidad_docs', 'creado_en')
     search_fields = ('nombre', 'descripcion')
-    readonly_fields = ('cantidad_docs', 'fecha_creacion')
+    readonly_fields = ('cantidad_docs', 'creado_en', 'actualizado_en')
     inlines = [DocumentoInline]
     
     def icono_nombre(self, obj):

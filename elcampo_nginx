@@ -1,0 +1,21 @@
+server {
+    listen 80;
+    server_name el-campo-back.duckdns.org;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    
+    # Archivos estáticos
+    location /static/ {
+        alias /home/ubuntu/elcampo/staticfiles/;
+    }
+    
+    # Archivos subidos por el usuario (media)
+    location /media/ {
+        alias /home/ubuntu/elcampo/media/;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/ubuntu/elcampo/elcampo.sock;
+    }
+}

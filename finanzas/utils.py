@@ -91,14 +91,18 @@ def calcular_porcentaje_consumido(total_gastado, presupuesto_objetivo):
 def verificar_stock_bajo(material):
     """
     Verifica si un material tiene stock bajo.
+    DEPRECATED: Usar inventario.services.InventarioService.obtener_materiales_stock_bajo()
     
     Args:
-        material: Instancia del modelo Material
+        material: Instancia del modelo Material (de inventario)
     
     Returns:
         bool: True si el stock está en nivel de alerta
     """
-    return material.stock_actual <= material.stock_minimo_alerta
+    from inventario.models import Material
+    if isinstance(material, Material):
+        return material.stock_actual <= material.stock_minimo_alerta
+    return False
 
 
 def obtener_materiales_stock_bajo():
@@ -108,10 +112,13 @@ def obtener_materiales_stock_bajo():
     Returns:
         QuerySet: Materiales con stock bajo
     """
-    from .models import Material
+    from inventario.models import Material
     from django.db.models import F
     
-    return Material.objects.filter(stock_actual__lte=F('stock_minimo_alerta'))
+    return Material.objects.filter(
+        eliminado=False,
+        stock_actual__lte=F('stock_minimo_alerta')
+    )
 
 
 def formatear_monto_boliviano(monto):
