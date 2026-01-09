@@ -1,23 +1,40 @@
+# Configuración y credenciales
 .env
-venv/
-__pycache__/
-*.pyc
-db.sqlite3
-.pem
+.env.local
+.env.*.local
+*.pem
 elcampo.pem
 
-# Archivos temporales de desarrollo
-*.log
-*.pyc
-*.pyo
-*.pyd
-.Python
+# Entorno virtual
+venv/
+env/
+ENV/
+.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
 *.so
-*.egg
-*.egg-info
+.Python
+*.egg-info/
 dist/
 build/
+
+# Base de datos local
+db.sqlite3
+*.db
+
+# Logs
+*.log
+logs/
 django.log
+
+# Archivos media y estáticos (en producción se generan)
+media/
+staticfiles/
+static/
+
 # IDEs
 .vscode/
 .idea/
@@ -28,3 +45,7 @@ django.log
 # OS
 .DS_Store
 Thumbs.db
+
+# Backups
+*.backup
+backups/
