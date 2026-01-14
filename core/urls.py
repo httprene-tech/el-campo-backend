@@ -2,9 +2,17 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from finanzas.views import CustomAuthToken, CambiarContrasenaView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Autenticación global
+    path('api/auth/login/', CustomAuthToken.as_view(), name='api_token_auth'),
+    path('api/auth/cambiar-contrasena/', CambiarContrasenaView.as_view(), name='cambiar_contrasena'),
+    # Compatibilidad con frontend antiguo
+    path('api/finanzas/auth/login/', CustomAuthToken.as_view()),
+    path('api/finanzas/auth/cambiar-contrasena/', CambiarContrasenaView.as_view()),
+    # Módulos del ERP
     path('api/finanzas/', include('finanzas.urls')),
     path('api/inventario/', include('inventario.urls')),
     path('api/calendario/', include('calendario.urls')),

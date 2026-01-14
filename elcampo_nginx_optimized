@@ -1,0 +1,47 @@
+server {
+    server_name el-campo-back.duckdns.org;
+
+    # Compresion Gzip para mejorar velocidad
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_proxied any;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml;
+    gzip_comp_level 6;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+
+    # Archivos estaticos con cache de 30 dias
+    location /static/ {
+        alias /home/ubuntu/elcampo/staticfiles/;
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+
+    # Imagenes y media con cache de 7 dias
+    location /media/ {
+        alias /home/ubuntu/elcampo/media/;
+        expires 7d;
+        add_header Cache-Control "public";
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/home/ubuntu/elcampo/elcampo.sock;
+    }
+
+    listen 443 ssl;
+    ssl_certificate /etc/letsencrypt/live/el-campo-back.duckdns.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/el-campo-back.duckdns.org/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+}
+
+server {
+    if ($host = el-campo-back.duckdns.org) {
+        return 301 https://$host$request_uri;
+    }
+    listen 80;
+    server_name el-campo-back.duckdns.org;
+    return 404;
+}

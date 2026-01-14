@@ -2906,3 +2906,4 @@ INFO 2026-01-09 00:46:30,112 log "GET /admin/finanzas/documento/ HTTP/1.1" 200 2
 INFO 2026-01-09 00:46:30,183 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212
 INFO 2026-01-09 00:46:32,681 log "GET /admin/finanzas/proyecto/ HTTP/1.1" 200 27077
 INFO 2026-01-09 00:46:32,754 log "GET /admin/jsi18n/ HTTP/1.1" 200 8212
+INFO 2026-01-09 01:07:58,396 autoreload D:\Escritorio\Software el Campo\core\common\permissions.py changed, reloading.

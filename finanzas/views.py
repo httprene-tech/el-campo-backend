@@ -25,18 +25,19 @@ from reportlab.lib.styles import getSampleStyleSheet
 
 # Local imports
 from .models import (
-    Proyecto, Categoria, Gasto, Proveedor,
+    Proyecto, Categoria, Gasto, Proveedor, Comprobante,
     Socio, Album, FotoAlbum, CarpetaDocumento, Documento
 )
 from .serializers import (
-    ProyectoSerializer, CategoriaSerializer, GastoSerializer, ProveedorSerializer,
+    ProyectoSerializer, CategoriaSerializer, GastoSerializer, GastoListSerializer, ProveedorSerializer,
     SocioSerializer, AlbumSerializer, AlbumListSerializer, FotoAlbumSerializer,
-    CarpetaDocumentoSerializer, CarpetaDocumentoListSerializer, DocumentoSerializer
+    CarpetaDocumentoSerializer, CarpetaDocumentoListSerializer, DocumentoSerializer,
+    ComprobanteSerializer
 )
 from core.common.mixins import OptimizedQuerySetMixin, FilterByDateMixin
 from .constants import ERROR_PRESUPUESTO_EXCEDIDO
 from .services import FinanzasService
-from core.common.permissions import IsAdminOrReadOnly
+from core.common.permissions import IsAdminOrReadOnly, IsOwnerOrAdmin
 
 # Logger configuration
 logger = logging.getLogger(__name__)
@@ -139,7 +140,7 @@ class AlbumViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
     """
     queryset = Album.objects.filter(eliminado=False)
     serializer_class = AlbumSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated, IsOwnerOrAdmin]
 
     def get_serializer_class(self):
         """Usa serializer ligero para listado."""
@@ -178,8 +179,15 @@ class FotoAlbumViewSet(OptimizedQuerySetMixin, viewsets.ModelViewSet):
         return queryset.order_by('-creado_en')
 
     def perform_create(self, serializer):
-        """Asigna el usuario que sube la foto."""
-        serializer.save(subido_por=self.request.user)
+        """Asigna el usuario que sube la foto y fecha actual si no se proporciona."""
+        from django.utils import timezone
+        
+        # Si no se proporciona fecha_foto, usar la fecha actual
+        fecha_foto = serializer.validated_data.get('fecha_foto')
+        if not fecha_foto:
+            serializer.save(subido_por=self.request.user, fecha_foto=timezone.now().date())
+        else:
+            serializer.save(subido_por=self.request.user)
 
 
 # ============================================================================
@@ -212,7 +220,7 @@ class DocumentoViewSet(OptimizedQuerySetMixin, FilterByDateMixin, viewsets.Model
     """
     queryset = Documento.objects.filter(eliminado=False)
     serializer_class = DocumentoSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated, IsOwnerOrAdmin]
     parser_classes = [MultiPartParser, FormParser]
 
     def get_queryset(self):
@@ -243,6 +251,29 @@ class DocumentoViewSet(OptimizedQuerySetMixin, FilterByDateMixin, viewsets.Model
     def perform_create(self, serializer):
         """Asigna el usuario que sube el documento."""
         serializer.save(subido_por=self.request.user)
+
+
+# ============================================================================
+# VIEWSETS DE COMPROBANTES
+# ============================================================================
+
+class ComprobanteViewSet(viewsets.ModelViewSet):
+    """
+    ViewSet para gestionar comprobantes de gastos.
+    Permite subir múltiples fotos a un gasto.
+    """
+    queryset = Comprobante.objects.filter(eliminado=False)
+    serializer_class = ComprobanteSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    parser_classes = [MultiPartParser, FormParser]
+
+    def get_queryset(self):
+        """Filtra comprobantes por gasto si se especifica."""
+        queryset = super().get_queryset()
+        gasto_id = self.request.query_params.get('gasto')
+        if gasto_id:
+            queryset = queryset.filter(gasto_id=gasto_id)
+        return queryset.select_related('gasto').order_by('-creado_en')
 
 
 # ============================================================================
@@ -458,8 +489,14 @@ class GastoViewSet(OptimizedQuerySetMixin, FilterByDateMixin, viewsets.ModelView
     """
     queryset = Gasto.objects.filter(eliminado=False)
     serializer_class = GastoSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticated, IsOwnerOrAdmin]
     parser_classes = [MultiPartParser, FormParser]
+
+    def get_serializer_class(self):
+        """Usa serializer ligero para listado (mejora rendimiento)."""
+        if self.action == 'list':
+            return GastoListSerializer
+        return GastoSerializer
 
     def get_queryset(self):
         """Optimiza queries y permite filtrar gastos por proyecto, categoría, fecha y retroactivo."""
@@ -490,8 +527,15 @@ class GastoViewSet(OptimizedQuerySetMixin, FilterByDateMixin, viewsets.ModelView
         return queryset
 
     def perform_create(self, serializer):
-        """Inyecta el usuario que registra el gasto."""
-        serializer.save(usuario=self.request.user)
+        """Inyecta el usuario que registra el gasto y crea Comprobante si hay imagen."""
+        gasto = serializer.save(usuario=self.request.user)
+        
+        # Si el gasto tiene imagen_comprobante, crear registro en tabla Comprobante
+        if gasto.imagen_comprobante:
+            Comprobante.objects.create(
+                gasto=gasto,
+                imagen=gasto.imagen_comprobante
+            )
 
     def create(self, request, *args, **kwargs):
         """Valida que no se exceda el presupuesto del proyecto."""
@@ -557,3 +601,39 @@ class GastoViewSet(OptimizedQuerySetMixin, FilterByDateMixin, viewsets.ModelView
         ).order_by('-mes')
         
         return Response(list(resumen))
+
+    @action(detail=False, methods=['get'])
+    def resumen_por_categoria(self, request):
+        """
+        Retorna un resumen de gastos agrupado por categoría.
+        Query params:
+            - proyecto: ID del proyecto (requerido)
+        """
+        proyecto_id = request.query_params.get('proyecto')
+        if not proyecto_id:
+            return Response(
+                {"error": "Se requiere el parámetro 'proyecto'"},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        
+        gastos = Gasto.objects.filter(
+            proyecto_id=proyecto_id,
+            eliminado=False
+        ).select_related('categoria')
+        
+        resumen = gastos.values(
+            'categoria__nombre'
+        ).annotate(
+            total=Sum('monto')
+        ).order_by('-total')
+        
+        # Formatear respuesta para el frontend
+        resultado = [
+            {
+                "categoria": item['categoria__nombre'] or 'Sin categoría',
+                "total": float(item['total'] or 0)
+            }
+            for item in resumen
+        ]
+        
+        return Response(resultado)

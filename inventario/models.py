@@ -95,6 +95,12 @@ class Material(BaseModel):
     def __str__(self):
         return f"{self.nombre} ({self.stock_actual} {self.unidad_medida})"
 
+    def save(self, *args, **kwargs):
+        """Asegura que el código sea None si está vacío para evitar errores de unicidad."""
+        if self.codigo == "":
+            self.codigo = None
+        super().save(*args, **kwargs)
+
     def __repr__(self):
         return f"<Material: {self.nombre} - Stock: {self.stock_actual}>"
 

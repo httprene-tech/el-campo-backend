@@ -121,7 +121,8 @@ class GastoAdmin(admin.ModelAdmin):
     )
 
     def monto_format(self, obj):
-        return format_html('<b>{:,.2f} Bs</b>', obj.monto)
+        monto_formateado = "{:,.2f}".format(float(obj.monto))
+        return format_html('<b>{} Bs</b>', monto_formateado)
     monto_format.short_description = "Monto"
     
     def save_model(self, request, obj, form, change):

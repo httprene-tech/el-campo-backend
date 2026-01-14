@@ -3,6 +3,8 @@ from rest_framework.routers import DefaultRouter
 from .views import (
     # Finanzas
     ProyectoViewSet, CategoriaViewSet, GastoViewSet, ProveedorViewSet,
+    # Comprobantes
+    ComprobanteViewSet,
     # Socios/Familia
     SocioViewSet,
     # Galería
@@ -21,6 +23,7 @@ router.register(r'proyectos', ProyectoViewSet)
 router.register(r'categorias', CategoriaViewSet)
 router.register(r'gastos', GastoViewSet)
 router.register(r'proveedores', ProveedorViewSet)
+router.register(r'comprobantes', ComprobanteViewSet)
 
 # Socios/Familia
 router.register(r'socios', SocioViewSet)
@@ -35,7 +38,5 @@ router.register(r'documentos', DocumentoViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('auth/login/', CustomAuthToken.as_view(), name='api_token_auth'),
-    path('auth/cambiar-contrasena/', CambiarContrasenaView.as_view(), name='cambiar_contrasena'),
 ]
 

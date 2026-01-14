@@ -43,7 +43,7 @@ class SocioSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'usuario', 'usuario_detalle', 'nombre_completo',
             'rol', 'rol_display', 'telefono', 'parentesco', 
-            'activo', 'fecha_registro'
+            'activo', 'creado_en'
         ]
 
     def get_nombre_completo(self, obj):
@@ -65,7 +65,7 @@ class ComprobanteSerializer(serializers.ModelSerializer):
     """Serializer para comprobantes/fotos de gastos."""
     class Meta:
         model = Comprobante
-        fields = ['id', 'imagen', 'subido_en']
+        fields = ['id', 'gasto', 'imagen', 'creado_en']
 
 
 # ============================================================================
@@ -107,6 +107,26 @@ class GastoSerializer(serializers.ModelSerializer):
         ]
 
 
+class GastoListSerializer(serializers.ModelSerializer):
+    """Serializer ligero para listado de gastos (sin fotos anidadas - mejora rendimiento)."""
+    categoria_nombre = serializers.ReadOnlyField(source='categoria.nombre')
+    proveedor_nombre = serializers.ReadOnlyField(source='proveedor_rel.nombre')
+    tiene_comprobante = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Gasto
+        fields = [
+            'id', 'proyecto', 'monto', 'descripcion', 'fecha', 
+            'categoria', 'categoria_nombre', 'proveedor_rel', 'proveedor_nombre',
+            'metodo_pago', 'es_retroactivo', 'tiene_comprobante', 
+            'imagen_comprobante', 'creado_en', 'usuario'
+        ]
+
+    def get_tiene_comprobante(self, obj):
+        """Indica si el gasto tiene comprobante (sin cargar la imagen)."""
+        return bool(obj.imagen_comprobante) or obj.fotos.exists()
+
+
 # ============================================================================
 # SERIALIZERS DE PROYECTOS
 # ============================================================================
@@ -144,7 +164,7 @@ class FotoAlbumSerializer(serializers.ModelSerializer):
         model = FotoAlbum
         fields = [
             'id', 'album', 'imagen', 'titulo', 'descripcion',
-            'fecha_foto', 'fecha_subida', 'subido_por', 'subido_por_nombre'
+            'fecha_foto', 'creado_en', 'subido_por', 'subido_por_nombre'
         ]
 
     def get_subido_por_nombre(self, obj):
@@ -162,7 +182,7 @@ class AlbumSerializer(serializers.ModelSerializer):
     class Meta:
         model = Album
         fields = [
-            'id', 'nombre', 'descripcion', 'fecha_creacion',
+            'id', 'nombre', 'descripcion', 'creado_en',
             'creado_por', 'creado_por_nombre', 'cantidad_fotos', 'fotos'
         ]
 
@@ -179,7 +199,7 @@ class AlbumListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Album
-        fields = ['id', 'nombre', 'descripcion', 'fecha_creacion', 'cantidad_fotos', 'portada']
+        fields = ['id', 'nombre', 'descripcion', 'creado_en', 'cantidad_fotos', 'portada', 'creado_por']
 
     def get_portada(self, obj):
         """Retorna la URL de la primera foto como portada."""
@@ -204,7 +224,7 @@ class DocumentoSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'carpeta', 'carpeta_nombre', 'tipo', 'tipo_display',
             'nombre', 'archivo', 'descripcion', 'fecha_documento',
-            'fecha_subida', 'subido_por', 'subido_por_nombre'
+            'creado_en', 'subido_por', 'subido_por_nombre'
         ]
 
     def get_subido_por_nombre(self, obj):
@@ -227,7 +247,7 @@ class CarpetaDocumentoSerializer(serializers.ModelSerializer):
         model = CarpetaDocumento
         fields = [
             'id', 'nombre', 'descripcion', 'icono',
-            'fecha_creacion', 'cantidad_documentos', 'documentos'
+            'creado_en', 'cantidad_documentos', 'documentos'
         ]
 
 

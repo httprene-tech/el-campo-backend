@@ -113,6 +113,14 @@ DATABASES = {
     }
 }
 
+# Configuración de Caché (mejora rendimiento)
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'django_cache_table',
+    }
+}
+
 # Configuración de CORS (Para que React PWA pueda conectarse)
 CORS_ALLOW_ALL_ORIGINS = os.getenv('CORS_ALLOW_ALL_ORIGINS') == 'True'
 

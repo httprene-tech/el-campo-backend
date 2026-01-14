@@ -30,12 +30,14 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
         if request.method in permissions.SAFE_METHODS:
             return True
         
-        # Permitir escritura solo al creador (si el objeto tiene campo 'usuario' o 'creado_por')
+        # Permitir escritura solo al creador o administradores
+        is_owner = False
         if hasattr(obj, 'usuario'):
-            return obj.usuario == request.user
-        if hasattr(obj, 'creado_por'):
-            return obj.creado_por == request.user
-        return False
+            is_owner = obj.usuario == request.user
+        elif hasattr(obj, 'creado_por'):
+            is_owner = obj.creado_por == request.user
+            
+        return is_owner or request.user.is_staff
 
 
 class IsSocioActivo(permissions.BasePermission):
@@ -57,3 +59,24 @@ class IsSocioActivo(permissions.BasePermission):
         except AttributeError:
             # Si no tiene perfil_socio, permitir acceso (compatibilidad)
             return True
+
+
+class IsOwnerOrAdmin(permissions.BasePermission):
+    """
+    Permiso que permite:
+    - Ver el objeto (SAFE_METHODS) a cualquier usuario autenticado
+    - Crear objetos a cualquier usuario autenticado
+    - Modificar/Eliminar solo al dueño o administradores
+    """
+    def has_object_permission(self, request, view, obj):
+        # Superusuarios y staff siempre tienen permiso
+        if request.user.is_staff or request.user.is_superuser:
+            return True
+            
+        # Verificar dueño
+        if hasattr(obj, 'usuario'):
+            return obj.usuario == request.user
+        if hasattr(obj, 'creado_por'):
+            return obj.creado_por == request.user
+            
+        return False
