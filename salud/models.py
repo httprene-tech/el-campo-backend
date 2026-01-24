@@ -42,6 +42,15 @@ class Vacunacion(BaseModel):
         related_name='vacunaciones_aplicadas',
         help_text="Usuario que registró la vacunación"
     )
+    # Integración con Finanzas: vincular a un gasto si se compró la vacuna
+    gasto = models.ForeignKey(
+        'finanzas.Gasto',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='vacunaciones',
+        help_text="Gasto asociado a la compra de vacunas (opcional)"
+    )
     observaciones = models.TextField(blank=True, null=True)
 
     class Meta:
@@ -107,6 +116,15 @@ class Tratamiento(BaseModel):
         on_delete=models.SET_NULL,
         null=True,
         related_name='tratamientos_aplicados'
+    )
+    # Integración con Finanzas: vincular a un gasto si se compró el medicamento
+    gasto = models.ForeignKey(
+        'finanzas.Gasto',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='tratamientos',
+        help_text="Gasto asociado a la compra de medicamentos (opcional)"
     )
     resultado = models.TextField(
         blank=True,

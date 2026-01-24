@@ -17,7 +17,7 @@ class VacunacionSerializer(serializers.ModelSerializer):
             'id', 'lote', 'lote_nombre', 'lote_galpon', 'fecha',
             'tipo_vacuna', 'cantidad_aves', 'metodo_aplicacion',
             'aplicado_por', 'aplicado_por_nombre', 'observaciones',
-            'creado_en', 'actualizado_en'
+            'gasto', 'creado_en', 'actualizado_en'
         ]
         read_only_fields = ['creado_en', 'actualizado_en']
 
@@ -48,7 +48,7 @@ class TratamientoSerializer(serializers.ModelSerializer):
             'id', 'lote', 'lote_nombre', 'fecha_inicio', 'fecha_fin',
             'tipo', 'tipo_display', 'medicamento', 'dosis', 'cantidad_aves',
             'motivo', 'aplicado_por', 'aplicado_por_nombre', 'resultado',
-            'creado_en', 'actualizado_en'
+            'gasto', 'creado_en', 'actualizado_en'
         ]
         read_only_fields = ['creado_en', 'actualizado_en']
 
@@ -56,6 +56,18 @@ class TratamientoSerializer(serializers.ModelSerializer):
         if obj.aplicado_por:
             return obj.aplicado_por.get_full_name() or obj.aplicado_por.username
         return None
+
+    def validate(self, attrs):
+        """Valida que fecha_fin sea posterior a fecha_inicio."""
+        fecha_inicio = attrs.get('fecha_inicio')
+        fecha_fin = attrs.get('fecha_fin')
+        
+        if fecha_inicio and fecha_fin:
+            if fecha_fin < fecha_inicio:
+                raise serializers.ValidationError({
+                    'fecha_fin': 'La fecha de fin debe ser posterior a la fecha de inicio.'
+                })
+        return attrs
 
 
 class TratamientoListSerializer(serializers.ModelSerializer):

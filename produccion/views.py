@@ -17,6 +17,7 @@ from .serializers import (
     RecoleccionSerializer, RecoleccionListSerializer,
     CalidadHuevoSerializer
 )
+from .services import ProduccionService
 from core.common.mixins import OptimizedQuerySetMixin, FilterByDateMixin
 
 logger = logging.getLogger(__name__)

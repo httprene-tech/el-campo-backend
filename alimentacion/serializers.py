@@ -54,7 +54,7 @@ class RacionSerializer(serializers.ModelSerializer):
             'id', 'lote', 'lote_nombre', 'formula', 'formula_nombre',
             'fecha', 'cantidad_kg', 'consumo_por_ave',
             'registrado_por', 'registrado_por_nombre', 'notas',
-            'creado_en', 'actualizado_en'
+            'gasto', 'creado_en', 'actualizado_en'
         ]
         read_only_fields = ['creado_en', 'actualizado_en']
 
@@ -62,6 +62,27 @@ class RacionSerializer(serializers.ModelSerializer):
         if obj.registrado_por:
             return obj.registrado_por.get_full_name() or obj.registrado_por.username
         return None
+
+    def validate(self, attrs):
+        """Valida que la fórmula sea apropiada para la edad del lote."""
+        lote = attrs.get('lote')
+        formula = attrs.get('formula')
+        
+        if lote and formula:
+            edad_semanas = lote.edad_dias // 7
+            
+            if formula.edad_minima_semanas > edad_semanas:
+                raise serializers.ValidationError({
+                    'formula': f"La fórmula '{formula.nombre}' es para aves de al menos "
+                               f"{formula.edad_minima_semanas} semanas. El lote tiene {edad_semanas} semanas."
+                })
+            
+            if formula.edad_maxima_semanas and formula.edad_maxima_semanas < edad_semanas:
+                raise serializers.ValidationError({
+                    'formula': f"La fórmula '{formula.nombre}' es para aves de máximo "
+                               f"{formula.edad_maxima_semanas} semanas. El lote tiene {edad_semanas} semanas."
+                })
+        return attrs
 
 
 class RacionListSerializer(serializers.ModelSerializer):

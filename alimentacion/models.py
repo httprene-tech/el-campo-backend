@@ -106,6 +106,15 @@ class Racion(BaseModel):
         null=True,
         related_name='raciones_registradas'
     )
+    # Integración con Finanzas: vincular a un gasto si se compró el alimento
+    gasto = models.ForeignKey(
+        'finanzas.Gasto',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='raciones',
+        help_text="Gasto asociado a la compra de alimento (opcional)"
+    )
     notas = models.TextField(blank=True, null=True)
 
     class Meta:
