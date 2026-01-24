@@ -3,9 +3,14 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from finanzas.views import CustomAuthToken, CambiarContrasenaView
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # Documentación API (Swagger/ReDoc)
+    path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
+    path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
+    path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
     # Autenticación global
     path('api/auth/login/', CustomAuthToken.as_view(), name='api_token_auth'),
     path('api/auth/cambiar-contrasena/', CambiarContrasenaView.as_view(), name='cambiar_contrasena'),

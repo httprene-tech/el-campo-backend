@@ -7,6 +7,9 @@ tzdata==2025.3
 # Django REST Framework
 djangorestframework==3.16.1
 
+# API Documentation (Swagger/ReDoc)
+drf-spectacular==0.29.0
+
 # CORS Headers para React/Vite
 django-cors-headers==4.9.0
 

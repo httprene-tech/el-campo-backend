@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework', 
     'rest_framework.authtoken',
     'corsheaders',
+    'drf_spectacular',
     # Módulos del ERP
     'core',
     'core.common',
@@ -66,6 +67,25 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': [
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
+    ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# Configuración de drf-spectacular para documentación API
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'El Campo API',
+    'DESCRIPTION': 'API REST para gestión integral de granja avícola y finanzas. '
+                   'Módulos: Finanzas, Producción, Salud, Inventario, Alimentación, Calendario.',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'COMPONENT_SPLIT_REQUEST': True,
+    'TAGS': [
+        {'name': 'Finanzas', 'description': 'Gastos, proyectos, proveedores y presupuestos'},
+        {'name': 'Producción', 'description': 'Galpones, lotes, recolección de huevos'},
+        {'name': 'Salud', 'description': 'Vacunaciones, tratamientos, mortalidad'},
+        {'name': 'Inventario', 'description': 'Materiales y movimientos de stock'},
+        {'name': 'Alimentación', 'description': 'Raciones, consumo diario, fórmulas'},
+        {'name': 'Calendario', 'description': 'Eventos y recordatorios'},
     ],
 }
 MIDDLEWARE = [
